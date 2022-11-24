@@ -1,9 +1,9 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 
 class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
-		const initialProps = await Document.getInitialProps(ctx);
-		return { ...initialProps };
+		const initialProps = await Document.getInitialProps(ctx)
+		return { ...initialProps }
 	}
 
 	render() {
@@ -14,7 +14,10 @@ class MyDocument extends Document {
 
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-					<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&family=Lato&display=swap" rel="stylesheet"></link>
+					<link
+						href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&family=Lato&display=swap"
+						rel="stylesheet"
+					></link>
 
 					{/* Global Site Tag (gtag.js) - Google Analytics */}
 					<script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
@@ -43,8 +46,8 @@ class MyDocument extends Document {
 					<NextScript />
 				</body>
 			</Html>
-		);
+		)
 	}
 }
 
-export default MyDocument;
+export default MyDocument

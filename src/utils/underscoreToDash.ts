@@ -1,3 +1,3 @@
 export function underscoreToDash(slug: string): string {
-	return slug.replace(/_/g, '-');
+	return slug.replace(/_/g, '-')
 }

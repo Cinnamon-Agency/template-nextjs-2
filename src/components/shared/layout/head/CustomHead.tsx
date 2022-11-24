@@ -2,8 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import { MetaTagsModel } from 'models'
 
-
-
 interface Props {
 	metaTags: MetaTagsModel
 }

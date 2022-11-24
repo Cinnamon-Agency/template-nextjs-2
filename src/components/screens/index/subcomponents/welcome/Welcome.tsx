@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import { Container, Title } from './Welcome.styled';
+import { Container, Title } from './Welcome.styled'
 
 export interface WelcomeProps {
-	title: string;
+	title: string
 }
 
 export const Welcome: React.FunctionComponent<WelcomeProps> = ({ title }) => {
@@ -11,5 +11,5 @@ export const Welcome: React.FunctionComponent<WelcomeProps> = ({ title }) => {
 		<Container>
 			<Title>{title}</Title>
 		</Container>
-	);
-};
+	)
+}

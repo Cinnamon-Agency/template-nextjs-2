@@ -8,4 +8,4 @@ export enum LineHeightsCaptions {
 	M = '1.3'
 }
 
-export type CaptionSize = 's' | 'm';
+export type CaptionSize = 's' | 'm'

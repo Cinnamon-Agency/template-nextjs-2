@@ -1,36 +1,35 @@
-import styled from '@emotion/styled';
-import { devices } from 'parameters';
-import { ParagraphsSize, FontSizesParagraphs, LineHeightsParagraphs } from './Paragraphs.parameters';
+import styled from '@emotion/styled'
+import { devices } from 'parameters'
+import { ParagraphsSize, FontSizesParagraphs, LineHeightsParagraphs } from './Paragraphs.parameters'
 
 export interface StyledParagraphProps {
-	textColor?: string;
-	size?: ParagraphsSize;
-	bold?: boolean;
-	position?: string;
+	textColor?: string
+	size?: ParagraphsSize
+	bold?: boolean
+	position?: string
 }
 
 const getFontSize = (size: ParagraphsSize | undefined): string => {
 	switch (size) {
 		case 's':
-			return FontSizesParagraphs.S;
+			return FontSizesParagraphs.S
 		case 'm':
-			return FontSizesParagraphs.M;
+			return FontSizesParagraphs.M
 		default:
-			return '17px';
+			return '17px'
 	}
-};
+}
 
 const getLineHeight = (size: ParagraphsSize | undefined): string => {
 	switch (size) {
 		case 's':
-			return LineHeightsParagraphs.S;
+			return LineHeightsParagraphs.S
 		case 'm':
-			return LineHeightsParagraphs.M;
+			return LineHeightsParagraphs.M
 		default:
-			return '1.7';
+			return '1.7'
 	}
-};
-
+}
 
 export const StyledParagraph = styled.p<StyledParagraphProps>`
 	color: ${props => props.textColor && props.textColor};
@@ -38,7 +37,7 @@ export const StyledParagraph = styled.p<StyledParagraphProps>`
 	line-height: ${props => getLineHeight(props.size)};
 	position: ${props => props.position && props.position};
 	font-family: 'Lato', sans-serif;
-`;
+`
 
 ////
 
@@ -49,8 +48,7 @@ export const StyledTag = styled.p<StyledParagraphProps>`
 	line-height: 12px;
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;
-`;
-
+`
 
 export const StyledSubHeadline = styled.p<StyledParagraphProps>`
 	color: ${props => props.textColor && props.textColor};
@@ -62,4 +60,4 @@ export const StyledSubHeadline = styled.p<StyledParagraphProps>`
 		font-size: 20px;
 		line-height: 32px;
 	}
-`;
+`

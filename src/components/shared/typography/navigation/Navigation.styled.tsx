@@ -1,10 +1,10 @@
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import { colors } from 'parameters';
+import { css } from '@emotion/react'
+import styled from '@emotion/styled'
+import { colors } from 'parameters'
 
 export interface StyleProps {
-	isActive: boolean;
-	textColor?: string;
+	isActive: boolean
+	textColor?: string
 }
 
 export const StyledNavItem = styled.a<StyleProps>`
@@ -46,7 +46,7 @@ export const StyledNavItem = styled.a<StyleProps>`
 				bottom: calc(-5px - 3px);
 			}
 		`}
-`;
+`
 
 ///
 export const StyledSubNavItem = styled.a<StyleProps>`
@@ -77,7 +77,7 @@ export const StyledSubNavItem = styled.a<StyleProps>`
 				bottom: calc(-5px - 3px);
 			}
 		`}
-`;
+`
 
 export const StyledFooterNavItem = styled.a<StyleProps>`
 	color: ${props => (props.textColor ? props.textColor : colors.primaryBlue1)};
@@ -86,4 +86,4 @@ export const StyledFooterNavItem = styled.a<StyleProps>`
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 20px;
-`;
+`

@@ -1,17 +1,17 @@
-import React, { ComponentType, DetailedHTMLProps, HTMLAttributes } from 'react';
-import { StyledTag, StyledParagraph, StyledSubHeadline, StyledParagraphProps } from './Paragraphs.styled';
-import { ParagraphsSize } from './Paragraphs.parameters';
+import React, { ComponentType, DetailedHTMLProps, HTMLAttributes } from 'react'
+import { StyledTag, StyledParagraph, StyledSubHeadline, StyledParagraphProps } from './Paragraphs.styled'
+import { ParagraphsSize } from './Paragraphs.parameters'
 
 interface HandleParagraphWrappingProps {
-	text: string;
-	color?: string;
-	size?: ParagraphsSize;
-	bold?: boolean;
-	isDangerouslySet?: boolean;
-	position?: string;
+	text: string
+	color?: string
+	size?: ParagraphsSize
+	bold?: boolean
+	isDangerouslySet?: boolean
+	position?: string
 }
 
-type PropsHeading = StyledParagraphProps & DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>;
+type PropsHeading = StyledParagraphProps & DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>
 
 const handleParagraphWrapping = (
 	Component: ComponentType<PropsHeading>,
@@ -23,12 +23,11 @@ const handleParagraphWrapping = (
 		<Component textColor={color} size={size} bold={bold} {...props}>
 			{text}
 		</Component>
-	);
-};
+	)
+}
 
-
-export const Paragraph = (props: HandleParagraphWrappingProps) => handleParagraphWrapping(StyledParagraph, props);
+export const Paragraph = (props: HandleParagraphWrappingProps) => handleParagraphWrapping(StyledParagraph, props)
 
 ///
-export const Tag = (props: HandleParagraphWrappingProps) => handleParagraphWrapping(StyledTag, props);
-export const SubHeadline = (props: HandleParagraphWrappingProps) => handleParagraphWrapping(StyledSubHeadline, props);
+export const Tag = (props: HandleParagraphWrappingProps) => handleParagraphWrapping(StyledTag, props)
+export const SubHeadline = (props: HandleParagraphWrappingProps) => handleParagraphWrapping(StyledSubHeadline, props)

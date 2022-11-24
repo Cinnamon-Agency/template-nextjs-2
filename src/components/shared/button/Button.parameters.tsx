@@ -1,5 +1,5 @@
-import { colors } from "parameters";
-import { TemplateButtonColors } from "./Button.model";
+import { colors } from 'parameters'
+import { TemplateButtonColors } from './Button.model'
 
 export const ButtonVariants: TemplateButtonColors = {
 	primary: {
@@ -53,4 +53,4 @@ export const ButtonVariants: TemplateButtonColors = {
 			disabled: colors.primaryBlue3
 		}
 	}
-};
+}

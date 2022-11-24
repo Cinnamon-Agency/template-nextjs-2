@@ -4,7 +4,6 @@ import { colors, devices } from 'parameters'
 import { ButtonSize, ButtonVariant } from './Button.model'
 import { ButtonVariants } from './Button.parameters'
 
-
 export interface ButtonStyledProps {
 	size?: ButtonSize
 	variant?: ButtonVariant
@@ -86,9 +85,15 @@ const StyledBaseButton = styled.button<ButtonStyledProps>`
 
 	${props =>
 		css`
-			color: ${props.disabled ? getButtonTheme(props.variant)?.text.disabled : getButtonTheme(props.variant)?.text.normal};
-			background-color: ${props.disabled ? getButtonTheme(props.variant)?.background.disabled : getButtonTheme(props.variant)?.background.normal};
-			outline-color: ${props.disabled ? getButtonTheme(props.variant)?.outline.disabled : getButtonTheme(props.variant)?.outline.normal};
+			color: ${props.disabled
+				? getButtonTheme(props.variant)?.text.disabled
+				: getButtonTheme(props.variant)?.text.normal};
+			background-color: ${props.disabled
+				? getButtonTheme(props.variant)?.background.disabled
+				: getButtonTheme(props.variant)?.background.normal};
+			outline-color: ${props.disabled
+				? getButtonTheme(props.variant)?.outline.disabled
+				: getButtonTheme(props.variant)?.outline.normal};
 			${Text} {
 				font-size: ${props.variant === 'primary' ? '1.6rem' : '1.3rem'};
 				font-weight: 700;
