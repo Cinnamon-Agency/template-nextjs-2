@@ -11,7 +11,7 @@ export const colors = {
 	primaryGeeen1: '#21CE99',
 	primaryGeeen2: '#79B3C0',
 	primaryGeeen3: '#167E8A'
-};
+}
 
 export const sizes = {
 	mobileS: 320,
@@ -21,7 +21,7 @@ export const sizes = {
 	laptop: 1024,
 	laptopL: 1440,
 	desktop: 2560
-};
+}
 
 export const devices = {
 	mobileS: `(min-width: ${sizes.mobileS}px)`,
@@ -31,10 +31,10 @@ export const devices = {
 	laptop: `(min-width: ${sizes.laptop}px)`,
 	laptopL: `(min-width: ${sizes.laptopL}px)`,
 	desktop: `(min-width: ${sizes.desktop}px)`
-};
+}
 
 export const routes = {
 	home: '/',
 	404: '404',
 	500: '500'
-};
+}

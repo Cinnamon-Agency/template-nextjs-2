@@ -1,4 +1,4 @@
-import { toast } from 'react-toastify';
+import { toast } from 'react-toastify'
 
 export async function postSubscribe(email: string) {
 	const res = await fetch(`/api/subscribe`, {
@@ -6,11 +6,11 @@ export async function postSubscribe(email: string) {
 		body: email
 	})
 		.then((response: any) => {
-			return response.json();
+			return response.json()
 		})
 		.then(res2 => {
 			if (!!res2.id) {
-				return true;
+				return true
 			}
 			if (res2.status === 400 && res2.title === 'Member Exists') {
 				toast.error('User exists', {
@@ -21,14 +21,14 @@ export async function postSubscribe(email: string) {
 					pauseOnHover: true,
 					draggable: false,
 					progress: undefined
-				});
-				return false;
+				})
+				return false
 			} else {
-				throw new Error(res2.title);
+				throw new Error(res2.title)
 			}
 		})
 		.catch(err => {
-			console.error('postSubscribe error', err);
+			console.error('postSubscribe error', err)
 			toast.error(err.message, {
 				position: 'top-right',
 				autoClose: 5000,
@@ -37,9 +37,9 @@ export async function postSubscribe(email: string) {
 				pauseOnHover: true,
 				draggable: false,
 				progress: undefined
-			});
-			throw new Error(err.message);
-		});
+			})
+			throw new Error(err.message)
+		})
 
-	return res;
+	return res
 }

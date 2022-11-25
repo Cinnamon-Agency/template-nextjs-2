@@ -1,7 +1,7 @@
-import { css, Global } from '@emotion/react';
-import emotionReset from 'emotion-reset';
-import emotionNormalize from 'emotion-normalize';
-import { colors } from 'parameters';
+import { css, Global } from '@emotion/react'
+import emotionReset from 'emotion-reset'
+import emotionNormalize from 'emotion-normalize'
+import { colors } from 'parameters'
 
 export const globalStyles = (
 	<>
@@ -74,4 +74,4 @@ export const globalStyles = (
 			`}
 		/>
 	</>
-);
+)

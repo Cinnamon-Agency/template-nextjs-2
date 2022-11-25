@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
-import { devices } from 'parameters';
+import styled from '@emotion/styled'
+import { devices } from 'parameters'
 
 export interface StyledHeadingProps {
-	textColor?: string;
-	position?: string;
+	textColor?: string
+	position?: string
 }
 
 export const StyledH1 = styled.h1<StyledHeadingProps>`
@@ -17,7 +17,7 @@ export const StyledH1 = styled.h1<StyledHeadingProps>`
 	@media ${devices.mobileM} {
 		font-size: 46px;
 	}
-`;
+`
 export const StyledH2 = styled.h2<StyledHeadingProps>`
 	color: ${props => props.textColor && props.textColor};
 	font-family: 'Epilogue', sans-serif;
@@ -29,7 +29,7 @@ export const StyledH2 = styled.h2<StyledHeadingProps>`
 		font-size: 48px;
 		line-height: 52.8px;
 	}
-`;
+`
 export const StyledH3 = styled.h3<StyledHeadingProps>`
 	color: ${props => props.textColor && props.textColor};
 	font-family: 'Epilogue', sans-serif;
@@ -43,7 +43,7 @@ export const StyledH3 = styled.h3<StyledHeadingProps>`
 		font-size: 24px;
 		line-height: 30px;
 	}
-`;
+`
 export const StyledH4 = styled.h4<StyledHeadingProps>`
 	color: ${props => props.textColor && props.textColor};
 	font-family: 'Epilogue', sans-serif;
@@ -55,7 +55,7 @@ export const StyledH4 = styled.h4<StyledHeadingProps>`
 		font-size: 24px;
 		line-height: 31px;
 	}
-`;
+`
 export const StyledH5 = styled.h5<StyledHeadingProps>`
 	color: ${props => props.textColor && props.textColor};
 	font-family: 'Epilogue', sans-serif;
@@ -67,7 +67,7 @@ export const StyledH5 = styled.h5<StyledHeadingProps>`
 		font-size: 20px;
 		line-height: 26px;
 	}
-`;
+`
 export const StyledH6 = styled.h6<StyledHeadingProps>`
 	color: ${props => props.textColor && props.textColor};
 	font-family: 'Epilogue', sans-serif;
@@ -79,4 +79,4 @@ export const StyledH6 = styled.h6<StyledHeadingProps>`
 		font-size: 20px;
 		line-height: 26px;
 	}
-`;
+`

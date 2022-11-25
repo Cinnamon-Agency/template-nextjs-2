@@ -8,4 +8,4 @@ export enum LineHeightsParagraphs {
 	M = '1.7'
 }
 
-export type ParagraphsSize = 's' | 'm';
+export type ParagraphsSize = 's' | 'm'

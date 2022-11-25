@@ -1,54 +1,54 @@
-import nodemailer from 'nodemailer';
-import formidable from 'formidable';
-import { ContactFormFinalData, NodemailerFiles } from 'components/screens/api';
+import nodemailer from 'nodemailer'
+import formidable from 'formidable'
+import { ContactFormFinalData, NodemailerFiles } from 'components/screens/api'
 
 // this must be included, otherwise its not working, it disables nextjs parser
 export const config = {
 	api: {
 		bodyParser: false
 	}
-};
+}
 
 export default async (req: any, res: any) => {
 	if (req.method === 'POST') {
 		// console.log('/body', req.body)
 
-		const myFields: any = [];
+		const myFields: any = []
 
-		const myFiles: any = [];
+		const myFiles: any = []
 
 		// i couldnt get it otherwise to wait till its completecd
 		await new Promise(function (resolve, reject) {
-			const form = new formidable.IncomingForm({ keepExtensions: true });
+			const form = new formidable.IncomingForm({ keepExtensions: true })
 			form.on('field', function (field: any, value: any) {
-				myFields.push(value);
-			});
+				myFields.push(value)
+			})
 
 			form.on('file', function (field: any, file: any) {
-				myFiles.push(file);
-			});
+				myFiles.push(file)
+			})
 
 			form.parse(req, function (err: any, fields: any, files: any) {
-				if (err) return reject(err);
-				resolve({ fields, files });
-			});
-		});
+				if (err) return reject(err)
+				resolve({ fields, files })
+			})
+		})
 
 		//console.log('myFields', myFields)
 
 		//console.log('myFiles', myFiles)
 
-		const formData = !!myFields.length ? JSON.parse(myFields[0]) : ({} as ContactFormFinalData);
+		const formData = !!myFields.length ? JSON.parse(myFields[0]) : ({} as ContactFormFinalData)
 
-		const formFiles: NodemailerFiles[] = [];
+		const formFiles: NodemailerFiles[] = []
 
 		if (Array.isArray(myFiles)) {
 			for (let i = 0; i < myFiles.length; i++) {
-				const file: any = myFiles[i];
+				const file: any = myFiles[i]
 				formFiles.push({
 					filename: file.name,
 					path: file.path
-				});
+				})
 			}
 		} else {
 			// formFiles.push({
@@ -71,7 +71,7 @@ export default async (req: any, res: any) => {
 			tls: {
 				rejectUnauthorized: false
 			}
-		});
+		})
 
 		const mailOptions = {
 			from: formData.email,
@@ -90,9 +90,9 @@ export default async (req: any, res: any) => {
 				},
 				...formFiles
 			]
-		};
+		}
 
-		console.log('mailOptions 1');
+		console.log('mailOptions 1')
 
 		await transporter
 			.sendMail(mailOptions)
@@ -110,25 +110,25 @@ export default async (req: any, res: any) => {
 							cid: 'email_image'
 						}
 					]
-				};
+				}
 
 				transporter
 					.sendMail(responseMailOptions)
 					.then((info: any) => {
-						res.status(200).send({ message: 'OK' });
-						return;
+						res.status(200).send({ message: 'OK' })
+						return
 					})
 					.catch((err: Error) => {
-						res.status(500).send({ err });
-						return;
-					});
+						res.status(500).send({ err })
+						return
+					})
 			})
 			.catch((err: Error) => {
-				res.status(500).send({ err });
-				return;
-			});
+				res.status(500).send({ err })
+				return
+			})
 	} else {
 		// Handle any other HTTP method
-		res.status(200).json({ name: 'GET' });
+		res.status(200).json({ name: 'GET' })
 	}
-};
+}

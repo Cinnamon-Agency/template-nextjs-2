@@ -1,16 +1,15 @@
-
-import { ContactFormFinalData } from 'models';
-import { toast } from 'react-toastify';
+import { ContactFormFinalData } from 'models'
+import { toast } from 'react-toastify'
 
 export async function postEmail(data: ContactFormFinalData, files: File[]) {
-	const upload = JSON.stringify(data);
+	const upload = JSON.stringify(data)
 
-	const formData = new FormData();
+	const formData = new FormData()
 
 	for (let index = 0; index < files.length; index++) {
-		formData.append('files', files[index]);
+		formData.append('files', files[index])
 	}
-	formData.append('data', upload);
+	formData.append('data', upload)
 
 	const res = await fetch(`/api/email`, {
 		method: 'POST',
@@ -21,13 +20,13 @@ export async function postEmail(data: ContactFormFinalData, files: File[]) {
 	})
 		.then(response => {
 			if (response.status === 200) {
-				return true;
+				return true
 			} else {
-				return false;
+				return false
 			}
 		})
 		.catch(err => {
-			console.error('error', err.message);
+			console.error('error', err.message)
 			toast.error(err.message, {
 				position: 'top-right',
 				autoClose: 5000,
@@ -36,8 +35,8 @@ export async function postEmail(data: ContactFormFinalData, files: File[]) {
 				pauseOnHover: true,
 				draggable: false,
 				progress: undefined
-			});
-			return false;
-		});
-	return res;
+			})
+			return false
+		})
+	return res
 }

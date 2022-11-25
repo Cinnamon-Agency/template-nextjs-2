@@ -1,25 +1,30 @@
-import { IBlogPost } from 'models';
-import { NextApiResponse } from 'next';
-import React from 'react';
-import { getBlog } from 'services';
+import { IBlogPost } from 'models'
+import { NextApiResponse } from 'next'
+import React from 'react'
+import { getBlog } from 'services'
 
 interface Response {
-	res: NextApiResponse;
+	res: NextApiResponse
 }
 
-const feed = () => <></>;
+const feed = () => <></>
 
-export default feed;
+export default feed
 
 export const getServerSideProps = async ({ res }: Response) => {
-	const blogs: IBlogPost[] = await getBlog();
+	const blogs: IBlogPost[] = await getBlog()
 
-	const title = 'Template Title';
-	const desc = 'The one-stop shop to design, develop and deploy your next digital project.';
+	const title = 'Template Title'
+	const desc = 'The one-stop shop to design, develop and deploy your next digital project.'
 
 	// encode &, <, >, " and '
 	const encodeXML = (data: string) =>
-		data.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+		data
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&apos;')
 
 	const items = blogs.map(
 		(item: IBlogPost) => `
@@ -31,7 +36,7 @@ export const getServerSideProps = async ({ res }: Response) => {
       <guid>${process.env.APP_BASE_URL}/blog/post/${item.slug}</guid>
       </item>
         `
-	);
+	)
 
 	const xml: string = `<?xml version="1.0"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -42,13 +47,13 @@ export const getServerSideProps = async ({ res }: Response) => {
       <description>${desc}</description>  
       ${items.join('')}
     </channel>
-    </rss>`;
+    </rss>`
 
-	res.setHeader('Content-Type', 'text/xml');
-	res.write(xml);
-	res.end();
+	res.setHeader('Content-Type', 'text/xml')
+	res.write(xml)
+	res.end()
 
 	return {
 		props: {}
-	};
-};
+	}
+}

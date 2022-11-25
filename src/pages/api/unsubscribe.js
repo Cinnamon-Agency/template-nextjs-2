@@ -1,5 +1,5 @@
-const nodemailer = require('nodemailer');
-import axios from 'axios';
+const nodemailer = require('nodemailer')
+import axios from 'axios'
 
 function SendEmail(email) {
 	const responseMailOptions = {
@@ -16,24 +16,24 @@ function SendEmail(email) {
 				cid: 'email_image'
 			}
 		]
-	};
+	}
 
 	transporter
 		.sendMail(responseMailOptions)
 		.then(info => {
-			res.status(200).send({ message: 'ok' });
-			return;
+			res.status(200).send({ message: 'ok' })
+			return
 		})
 		.catch(err => {
-			res.status(500).send({ err });
-			return;
-		});
+			res.status(500).send({ err })
+			return
+		})
 }
 
 export default async function handler(req, res) {
-	const mailchimpInstance = process.env.MAILCHIMP_ISTANCE;
-	const listUniqueId = process.env.MAILCHIMP_ID;
-	const mailchimpApiKey = process.env.MAILCHIMP_API_KEY;
+	const mailchimpInstance = process.env.MAILCHIMP_ISTANCE
+	const listUniqueId = process.env.MAILCHIMP_ID
+	const mailchimpApiKey = process.env.MAILCHIMP_API_KEY
 
 	const axiosConfig = {
 		headers: {
@@ -41,26 +41,26 @@ export default async function handler(req, res) {
 			Accept: 'application/json',
 			'Content-Type': 'application/json'
 		}
-	};
+	}
 
 	const postData = {
 		email_address: req.body,
 		status: 'subscribed'
-	};
+	}
 
-	console.log('postData', postData);
+	console.log('postData', postData)
 
 	try {
 		const mcResponse = await axios.post(
 			'https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/',
 			postData,
 			axiosConfig
-		);
-		console.log('Mailchimp List Response: ', mcResponse.data);
-		res.status(200).json(mcResponse.data);
+		)
+		console.log('Mailchimp List Response: ', mcResponse.data)
+		res.status(200).json(mcResponse.data)
 	} catch (err) {
-		const errdata = err['response']['data'];
-		console.log('Mailchimp Error:  ', errdata);
-		res.status(errdata.status).json(errdata);
+		const errdata = err['response']['data']
+		console.log('Mailchimp Error:  ', errdata)
+		res.status(errdata.status).json(errdata)
 	}
 }

@@ -1,4 +1,4 @@
-import { MetaTagsModel } from "models"
+import { MetaTagsModel } from 'models'
 
 export interface I404Page {
 	title: string

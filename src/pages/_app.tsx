@@ -1,16 +1,14 @@
-import type { AppProps, NextWebVitalsMetric } from 'next/app';
-import { useRouter } from 'next/router';
-import { createContext, useEffect, useRef, useState } from 'react';
-import { triggerEventGTM } from 'services';
-import { globalStyles } from 'style';
+import type { AppProps, NextWebVitalsMetric } from 'next/app'
+import { useRouter } from 'next/router'
+import { createContext, useEffect, useRef, useState } from 'react'
+import { triggerEventGTM } from 'services'
+import { globalStyles } from 'style'
 
 interface AppContextInterface {
 	isFirstLoad: boolean
 }
 
 export const AppContext = createContext<AppContextInterface>({} as AppContextInterface)
-
-
 
 const TemplateApp = ({ Component, pageProps }: AppProps) => {
 	const isBrowser = typeof window !== 'undefined'
@@ -107,7 +105,8 @@ const TemplateApp = ({ Component, pageProps }: AppProps) => {
 			<AppContext.Provider
 				value={{
 					isFirstLoad
-				}}>
+				}}
+			>
 				<Component {...pageProps} />
 			</AppContext.Provider>
 		</>
@@ -118,4 +117,4 @@ export function reportWebVitals(metric: NextWebVitalsMetric) {
 	// console.log(metric)
 }
 
-export default TemplateApp;
+export default TemplateApp

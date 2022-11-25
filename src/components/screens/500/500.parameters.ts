@@ -1,5 +1,5 @@
-import { routes } from 'parameters';
-import { I500Page } from './500.models';
+import { routes } from 'parameters'
+import { I500Page } from './500.models'
 
 // Page500
 export const page500: I500Page = {
@@ -16,4 +16,4 @@ export const page500: I500Page = {
 		url: `${process.env.HOST}/${routes[500]}`,
 		keywords: 'keywords, missing, here'
 	}
-};
+}

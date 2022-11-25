@@ -1,4 +1,4 @@
-import { MetaTagsModel } from 'models';
+import { MetaTagsModel } from 'models'
 
 export const defaultMetaTags: MetaTagsModel = {
 	title: 'Meta Title',
@@ -6,4 +6,4 @@ export const defaultMetaTags: MetaTagsModel = {
 	keywords: 'meta keywords',
 	image: `${process.env.HOST}/images/meta/general.png`,
 	url: `${process.env.HOST}`
-};
+}
