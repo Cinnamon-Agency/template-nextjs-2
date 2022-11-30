@@ -1,2 +1,1 @@
-export * from './layout/index'
-export * from './typography/index'
+export * from './layout'
