@@ -1,17 +1,17 @@
+import { Head } from 'components/shared/head'
 import { MetaTagsModel } from 'models'
-import { ReactNode } from 'react'
-import { Head } from './Head'
+import React from 'react'
 
-interface Props {
+interface LayoutProps {
 	metaTags: MetaTagsModel
-	children?: ReactNode
+	children: React.ReactNode
 }
 
-export const Layout = ({ metaTags, children }: Props) => {
+export const Layout = ({ metaTags, children }: LayoutProps) => {
 	return (
-		<>
+		<div>
 			<Head metaTags={metaTags} />
 			{children}
-		</>
+		</div>
 	)
 }

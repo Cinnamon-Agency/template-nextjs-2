@@ -6,7 +6,7 @@ const IndexPage: NextPage = () => {
 	return (
 		<Layout metaTags={defaultMetaTags}>
 			<main>
-				<h1>Title</h1>
+				<h1 style={{ textAlign: 'center' }}>Cinnamon Next js template</h1>
 			</main>
 		</Layout>
 	)
