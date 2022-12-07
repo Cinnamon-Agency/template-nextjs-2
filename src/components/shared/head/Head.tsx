@@ -1,6 +1,5 @@
-import React from 'react'
-import NextHead from 'next/head'
 import { MetaTagsModel } from 'models'
+import NextHead from 'next/head'
 
 interface Props {
 	metaTags: MetaTagsModel
