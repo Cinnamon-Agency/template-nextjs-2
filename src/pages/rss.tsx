@@ -38,7 +38,7 @@ export const getServerSideProps = async ({ res }: Response) => {
         `
 	)
 
-	const xml: string = `<?xml version="1.0"?>
+	const xml = `<?xml version="1.0"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <atom:link href="${process.env.APP_BASE_URL}/rss" rel="self" type="application/rss+xml" />

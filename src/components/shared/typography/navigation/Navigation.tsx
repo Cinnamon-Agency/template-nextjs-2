@@ -1,6 +1,6 @@
 import React, { ComponentType, PropsWithChildren } from 'react'
-import { StyledNavItem, StyledSubNavItem, StyledFooterNavItem, StyleProps } from './Navigation.styled'
 import Link from 'next/link'
+import { StyledNavItem, StyledSubNavItem, StyledFooterNavItem, StyleProps } from './Navigation.styled'
 
 interface Props {
 	text: string

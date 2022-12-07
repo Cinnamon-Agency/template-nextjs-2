@@ -34,11 +34,11 @@ export default async (req: any, res: any) => {
 			})
 		})
 
-		//console.log('myFields', myFields)
+		// console.log('myFields', myFields)
 
-		//console.log('myFiles', myFiles)
+		// console.log('myFiles', myFiles)
 
-		const formData = !!myFields.length ? JSON.parse(myFields[0]) : ({} as ContactFormFinalData)
+		const formData = myFields.length ? JSON.parse(myFields[0]) : ({} as ContactFormFinalData)
 
 		const formFiles: NodemailerFiles[] = []
 
@@ -116,16 +116,13 @@ export default async (req: any, res: any) => {
 					.sendMail(responseMailOptions)
 					.then((info: any) => {
 						res.status(200).send({ message: 'OK' })
-						return
 					})
 					.catch((err: Error) => {
 						res.status(500).send({ err })
-						return
 					})
 			})
 			.catch((err: Error) => {
 				res.status(500).send({ err })
-				return
 			})
 	} else {
 		// Handle any other HTTP method

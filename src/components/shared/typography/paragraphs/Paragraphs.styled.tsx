@@ -39,7 +39,7 @@ export const StyledParagraph = styled.p<StyledParagraphProps>`
 	font-family: 'Lato', sans-serif;
 `
 
-////
+/// /
 
 export const StyledTag = styled.p<StyledParagraphProps>`
 	color: ${props => props.textColor && props.textColor};

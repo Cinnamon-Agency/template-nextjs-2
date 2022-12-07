@@ -1,5 +1,6 @@
-const nodemailer = require('nodemailer')
 import axios from 'axios'
+
+const nodemailer = require('nodemailer')
 
 function SendEmail(email) {
 	const responseMailOptions = {
@@ -22,11 +23,9 @@ function SendEmail(email) {
 		.sendMail(responseMailOptions)
 		.then(info => {
 			res.status(200).send({ message: 'ok' })
-			return
 		})
 		.catch(err => {
 			res.status(500).send({ err })
-			return
 		})
 }
 
@@ -37,7 +36,7 @@ export default async function handler(req, res) {
 
 	const axiosConfig = {
 		headers: {
-			Authorization: 'Basic ' + Buffer.from('randomstring:' + mailchimpApiKey).toString('base64'),
+			Authorization: `Basic ${Buffer.from(`randomstring:${mailchimpApiKey}`).toString('base64')}`,
 			Accept: 'application/json',
 			'Content-Type': 'application/json'
 		}
@@ -52,14 +51,14 @@ export default async function handler(req, res) {
 
 	try {
 		const mcResponse = await axios.post(
-			'https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/',
+			`https://${mailchimpInstance}.api.mailchimp.com/3.0/lists/${listUniqueId}/members/`,
 			postData,
 			axiosConfig
 		)
 		console.log('Mailchimp List Response: ', mcResponse.data)
 		res.status(200).json(mcResponse.data)
 	} catch (err) {
-		const errdata = err['response']['data']
+		const errdata = err.response.data
 		console.log('Mailchimp Error:  ', errdata)
 		res.status(errdata.status).json(errdata)
 	}

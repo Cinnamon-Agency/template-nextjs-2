@@ -84,8 +84,8 @@ const TemplateApp = ({ Component, pageProps }: AppProps) => {
 			console.error('handleRouteChangeError err', err)
 			// console.log('handleRouteChangeError url', url)
 		}
-		//When the component is mounted, subscribe to router changes
-		//and log those page views
+		// When the component is mounted, subscribe to router changes
+		// and log those page views
 		router.events.on('routeChangeStart', handleRouteChangeStart)
 		router.events.on('routeChangeComplete', handleRouteChangeComplete)
 		router.events.on('routeChangeError', handleRouteChangeError)
@@ -105,8 +105,7 @@ const TemplateApp = ({ Component, pageProps }: AppProps) => {
 			<AppContext.Provider
 				value={{
 					isFirstLoad
-				}}
-			>
+				}}>
 				<Component {...pageProps} />
 			</AppContext.Provider>
 		</>

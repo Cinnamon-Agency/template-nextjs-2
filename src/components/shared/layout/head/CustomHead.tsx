@@ -23,7 +23,7 @@ export const CustomHead = ({ metaTags }: Props) => {
 			<meta name="twitter:image" content={image} key={image} />
 			<meta name="twitter:image:alt" content="blog thumbnail_image" />
 
-			<meta property="og:type" content={type ? type : 'website'} />
+			<meta property="og:type" content={type || 'website'} />
 			<meta property="og:title" content={title} />
 			<meta property="og:description" content={description} />
 			<meta property="og:image" content={image} />

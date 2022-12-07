@@ -1,8 +1,8 @@
 import { MetaTagsModel } from 'models'
 import React, { useContext } from 'react'
-import { LayoutWrapper } from './Layout.styled'
 import { AppContext } from 'pages/_app'
 import { CustomHead } from 'components/shared'
+import { LayoutWrapper } from './Layout.styled'
 
 interface LayoutProps {
 	metaTags: MetaTagsModel

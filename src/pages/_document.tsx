@@ -10,14 +10,14 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<link rel="favicon" href="/favicon.ico" />
+					<link href="/favicon.ico" />
 
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 					<link
 						href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&family=Lato&display=swap"
 						rel="stylesheet"
-					></link>
+					/>
 
 					{/* Global Site Tag (gtag.js) - Google Analytics */}
 					<script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
@@ -33,15 +33,15 @@ class MyDocument extends Document {
 							`
 						}}
 					/>
-					<link rel="preload" as="font"></link>
-					<script></script>
+					<link rel="preload" as="font" />
+					<script />
 				</Head>
 				<body>
 					<noscript
 						dangerouslySetInnerHTML={{
 							__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.GA_TRACKING_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
 						}}
-					></noscript>
+					/>
 					<Main />
 					<NextScript />
 				</body>
