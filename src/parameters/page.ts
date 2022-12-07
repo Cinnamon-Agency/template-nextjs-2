@@ -1,6 +1,9 @@
-import { MetaTagsModel } from 'models'
+import { MetaTags } from 'models'
 
-export const defaultMetaTags: MetaTagsModel = {
+export const defaultMetaTags: MetaTags = {
 	title: 'Meta Title',
-	description: 'Meta description'
+	description: 'Meta description',
+	url: '/',
+	keywords: 'cinnamon web',
+	image: ''
 }
