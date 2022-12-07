@@ -1,9 +1,9 @@
-import React, { useState, ComponentType, HTMLAttributeAnchorTarget } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
-import { Text, ButtonLink, ButtonStyledProps, StyledButton, WrapperIcon } from './Button.style'
+import React, { ComponentType, HTMLAttributeAnchorTarget } from 'react'
 import { UrlObject } from 'url'
 import { ButtonSize, ButtonVariant } from './Button.model'
-import Image from 'next/image'
+import { ButtonLink, ButtonStyledProps, StyledButton, Text, WrapperIcon } from './Button.style'
 
 interface CommonProps {
 	text: string
@@ -45,7 +45,6 @@ const handleButtonWrapping = (Component: ComponentType<ComponentProps>, props: P
 		iconFirst,
 		disablePadding
 	} = props
-	const [currentIcon] = useState(icon)
 
 	const button = (
 		<Component
@@ -58,14 +57,11 @@ const handleButtonWrapping = (Component: ComponentType<ComponentProps>, props: P
 			disableMargin={disableMargin}
 			iconFirst={iconFirst}
 			disablePadding={disablePadding}
-			onClick={() => {
-				onClick && onClick()
-			}}
-		>
+			onClick={() => onClick && onClick()}>
 			<Text>{text}</Text>
 			{icon ? (
 				<WrapperIcon>
-					<Image {...currentIcon} />
+					<Image {...icon} />
 				</WrapperIcon>
 			) : null}
 		</Component>
