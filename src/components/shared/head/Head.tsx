@@ -1,9 +1,7 @@
-import { MetaTagsModel } from 'models'
+import { MetaTags } from 'models'
 import NextHead from 'next/head'
 
-interface Props {
-	metaTags: MetaTagsModel
-}
+type Props = { metaTags: MetaTags }
 
 export const Head = ({ metaTags }: Props) => {
 	const { title, description, url, image, type } = metaTags

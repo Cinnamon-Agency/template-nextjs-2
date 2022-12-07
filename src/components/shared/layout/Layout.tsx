@@ -1,10 +1,10 @@
 import { Head } from 'components/shared/head'
-import { MetaTagsModel } from 'models'
-import React from 'react'
+import { MetaTags } from 'models'
+import { ReactNode } from 'react'
 
-interface LayoutProps {
-	metaTags: MetaTagsModel
-	children: React.ReactNode
+type LayoutProps = {
+	metaTags: MetaTags
+	children: ReactNode
 }
 
 export const Layout = ({ metaTags, children }: LayoutProps) => {

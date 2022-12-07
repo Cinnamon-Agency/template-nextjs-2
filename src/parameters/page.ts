@@ -1,6 +1,6 @@
-import { MetaTagsModel } from 'models'
+import { MetaTags } from 'models'
 
-export const defaultMetaTags: MetaTagsModel = {
+export const defaultMetaTags: MetaTags = {
 	title: 'Meta Title',
 	description: 'Meta description',
 	url: '/',
