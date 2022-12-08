@@ -1,1 +1,1 @@
-export { localAxios, remoteAxios } from './axios'
+export {}

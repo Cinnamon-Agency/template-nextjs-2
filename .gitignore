@@ -37,5 +37,5 @@ yarn-error.log*
 # vscode
 .vscode
 
-# git
-yarn.lock
+# intellij IDEA
+.idea
