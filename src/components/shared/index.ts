@@ -1,2 +1,2 @@
-export * from './layout/index'
-export * from './typography/index'
+export { Head } from './head'
+export { Layout } from './layout'

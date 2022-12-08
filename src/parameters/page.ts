@@ -1,9 +1,9 @@
-import { MetaTagsModel } from 'models'
+import { MetaTags } from 'models'
 
-export const defaultMetaTags: MetaTagsModel = {
+export const defaultMetaTags: MetaTags = {
 	title: 'Meta Title',
 	description: 'Meta description',
-	keywords: 'meta keywords',
-	image: `${process.env.HOST}/images/meta/general.png`,
-	url: `${process.env.HOST}`
+	url: '/',
+	keywords: 'cinnamon web',
+	image: ''
 }

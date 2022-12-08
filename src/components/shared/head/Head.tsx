@@ -1,16 +1,13 @@
-import React from 'react'
-import Head from 'next/head'
-import { MetaTagsModel } from 'models'
+import { MetaTags } from 'models'
+import NextHead from 'next/head'
 
-interface Props {
-	metaTags: MetaTagsModel
-}
+type Props = { metaTags: MetaTags }
 
-export const CustomHead = ({ metaTags }: Props) => {
+export const Head = ({ metaTags }: Props) => {
 	const { title, description, url, image, type } = metaTags
 
 	return (
-		<Head>
+		<NextHead>
 			<title>{title}</title>
 			<meta name="description" content={description} />
 			<meta property="og:url" content={url} />
@@ -23,10 +20,10 @@ export const CustomHead = ({ metaTags }: Props) => {
 			<meta name="twitter:image" content={image} key={image} />
 			<meta name="twitter:image:alt" content="blog thumbnail_image" />
 
-			<meta property="og:type" content={type ? type : 'website'} />
+			<meta property="og:type" content={type || 'website'} />
 			<meta property="og:title" content={title} />
 			<meta property="og:description" content={description} />
 			<meta property="og:image" content={image} />
-		</Head>
+		</NextHead>
 	)
 }
