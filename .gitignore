@@ -39,3 +39,6 @@ yarn-error.log*
 
 # git
 yarn.lock
+
+# intellij IDEA
+.idea
