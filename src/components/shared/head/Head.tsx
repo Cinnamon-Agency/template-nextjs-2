@@ -1,5 +1,13 @@
-import { MetaTags } from 'models'
 import NextHead from 'next/head'
+
+interface MetaTags {
+	title: string
+	description: string
+	url: string
+	keywords: string
+	image: string
+	type?: string
+}
 
 type Props = { metaTags: MetaTags }
 
