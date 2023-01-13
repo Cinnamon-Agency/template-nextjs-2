@@ -1,3 +1,5 @@
+import { withGlobalStyles } from './withGlobalStyles'
+
 export const parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },
 	controls: {
@@ -19,3 +21,5 @@ Object.defineProperty(NextImage, 'default', {
 	configurable: true,
 	value: props => <OriginalNextImage {...props} unoptimized />
 })
+
+export const decorators = [withGlobalStyles]
