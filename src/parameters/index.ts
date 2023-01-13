@@ -1,3 +1,1 @@
-export * from './constants'
-export * from './general'
-export * from './page'
+export * from './routes'

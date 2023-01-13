@@ -1,10 +1,9 @@
 import { Layout } from 'components/shared'
 import { NextPage } from 'next'
-import { defaultMetaTags } from 'parameters'
 
 const IndexPage: NextPage = () => {
 	return (
-		<Layout metaTags={defaultMetaTags}>
+		<Layout>
 			<main>
 				<h1 style={{ textAlign: 'center' }}>Cinnamon Next js template</h1>
 			</main>

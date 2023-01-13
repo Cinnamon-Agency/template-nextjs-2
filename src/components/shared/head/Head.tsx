@@ -1,5 +1,6 @@
 import NextHead from 'next/head'
 
+// Probably move to a file within this folder
 interface MetaTags {
 	title: string
 	description: string
@@ -9,9 +10,18 @@ interface MetaTags {
 	type?: string
 }
 
-type Props = { metaTags: MetaTags }
+// Probably move to a file within this folder
+const defaultMetaTags: MetaTags = {
+	title: 'Meta Title',
+	description: 'Meta description',
+	url: '/',
+	keywords: 'cinnamon web',
+	image: ''
+}
 
-export const Head = ({ metaTags }: Props) => {
+type Props = { metaTags?: MetaTags }
+
+export const Head = ({ metaTags = defaultMetaTags }: Props) => {
 	const { title, description, url, image, type } = metaTags
 
 	return (

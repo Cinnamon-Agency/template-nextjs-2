@@ -1,10 +1,9 @@
 import { Layout } from 'components/shared'
 import { NextPage } from 'next'
-import { defaultMetaTags } from 'parameters'
 
 const Custom500: NextPage = () => {
 	return (
-		<Layout metaTags={defaultMetaTags}>
+		<Layout>
 			<main>
 				<h1>500</h1>
 				<p>Server error occurred.</p>
