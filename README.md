@@ -12,6 +12,18 @@ Having Node.js 12.22.0 or later installed.
 - install dependencies by running `yarn install` in repo root.
 - set up the `.env` file
 
+## Important Step for import sorter
+Add this in VSC settings
+
+{
+  "editor.formatOnSave": false,
+  "eslint.validate": [
+    "typescript"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+}
 ## Scripts
 
 - `yarn dev` - runs project in development mode
