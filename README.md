@@ -24,6 +24,11 @@ Add this in VSC settings
     "source.fixAll": true
   }
 }
+
+if you are not using VSC, use script command
+
+more about the topic here:
+https://medium.com/weekly-webtips/how-to-sort-imports-like-a-pro-in-typescript-4ee8afd7258a
 ## Scripts
 
 - `yarn dev` - runs project in development mode
