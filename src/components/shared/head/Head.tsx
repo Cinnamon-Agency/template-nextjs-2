@@ -1,5 +1,6 @@
-import { MetaTags } from 'models'
 import NextHead from 'next/head'
+
+import { MetaTags } from 'models'
 
 type Props = { metaTags: MetaTags }
 

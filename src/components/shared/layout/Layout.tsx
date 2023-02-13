@@ -1,5 +1,6 @@
-import { Head } from 'components/shared/head'
 import { ComponentProps, ReactNode } from 'react'
+
+import { Head } from 'components/shared/head'
 
 type Props = ComponentProps<typeof Head> & {
 	children: ReactNode

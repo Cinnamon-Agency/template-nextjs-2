@@ -1,5 +1,6 @@
-import { Layout } from 'components/shared'
 import { NextPage } from 'next'
+
+import { Layout } from 'components/shared'
 import { defaultMetaTags } from 'parameters'
 
 const IndexPage: NextPage = () => {
