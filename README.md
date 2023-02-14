@@ -16,7 +16,7 @@ Having Node.js 12.22.0 or later installed.
 Add this in VSC settings
 
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "eslint.validate": [
     "typescript"
   ],
