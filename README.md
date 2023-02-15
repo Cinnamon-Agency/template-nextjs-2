@@ -15,16 +15,19 @@ Having Node.js 12.22.0 or later installed.
 ## Important Step for import sorter
 Add this in VSC settings
 
+```Javascript
 {
   "editor.formatOnSave": true,
   "eslint.validate": [
     "typescript"
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": true,
+    "source.organizeImports": true
+
   }
 }
-
+```
 if you are not using VSC, use script command
 
 more about the topic here:
