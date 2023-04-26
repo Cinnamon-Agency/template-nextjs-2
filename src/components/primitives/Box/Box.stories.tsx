@@ -41,5 +41,7 @@ export default {
 } as ComponentMeta<typeof BoxPrimitive>
 
 export const Box: ComponentStory<typeof BoxPrimitive> = args => (
-	<BoxPrimitive {...args}>I am a customizable box</BoxPrimitive>
+	<BoxPrimitive {...args} sm={{ background: 'red' }}>
+		I am a customizable box
+	</BoxPrimitive>
 )

@@ -1,50 +1,23 @@
-### Resolves
+**Changes**
 
-_What Github issue does this resolve (please include link)?_
+- Added ...
+- Removed ...
+- Changed ...
+- Nuked ...
+- Implemented ...
 
-- Resolves #
+Elaborate why did you do that changes if you think it will make reviewers life easier.
 
-### Proposed Changes
+**Notes**
 
-_Describe what this Pull Request does_
+Please add any additional notes or context about this pull request.
 
-### Reason for Changes
+**Steps to verify**
 
-_Explain why these changes should be made_
+What are the verification steps that needs to be checked before merging this pull request.
 
-### Test Coverage
+**Resources**
 
-_Please show how you have added tests to cover your changes_
+Jira: [TICKET_NAME](https://cinnamonagency.atlassian.net/browse/TICKET_ID)
 
-### Browser Coverage
-
-Check the OS/browser combinations tested (At least 2)
-
-Mac
-
-- [ ] Chrome
-- [ ] Firefox
-- [ ] Edge
-- [ ] Opera
-- [ ] Brave
-
-Windows
-
-- [ ] Chrome
-- [ ] Firefox
-- [ ] Edge
-- [ ] Opera
-- [ ] Brave
-
-iOS
-
-- [ ] Safari
-- [ ] Chrome
-
-Android
-
-- [ ] Firefox
-- [ ] Chrome
-- [ ] Opera
-- [ ] Samsung Internet Browser
-- [ ] Mi Browser
+Figma: [FIGMA_NAME](FIGMA_URL)

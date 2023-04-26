@@ -1,13 +1,17 @@
-import { Layout } from 'components/shared'
 import { NextPage } from 'next'
+import { GeneralLayout } from 'components/layout'
+
+const homepageMeta = {
+	title: 'Homepage',
+	description: 'Homepage',
+	url: '/'
+}
 
 const IndexPage: NextPage = () => {
 	return (
-		<Layout>
-			<main>
-				<h1 style={{ textAlign: 'center' }}>Cinnamon Next js template</h1>
-			</main>
-		</Layout>
+		<GeneralLayout metaTags={homepageMeta}>
+			<h1>Next.js Template</h1>
+		</GeneralLayout>
 	)
 }
 
