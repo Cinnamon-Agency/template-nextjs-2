@@ -1,7 +1,9 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
+
 import { SampleBox } from 'storybook/SampleBox'
-import { Sidebar as SidebarPrimitive } from './Sidebar'
+
 import { Stack } from '../Stack'
+import { Sidebar as SidebarPrimitive } from './Sidebar'
 
 export default {
 	title: 'Components/Primitives/Sidebar',

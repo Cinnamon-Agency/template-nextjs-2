@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+
 import { GeneralLayout } from 'components/layout'
 
 const homepageMeta = {

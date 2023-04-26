@@ -1,8 +1,10 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { SampleBox } from 'storybook/SampleBox'
 import { useState } from 'react'
-import { Stack } from '../Stack'
+
+import { SampleBox } from 'storybook/SampleBox'
+
 import { Box } from '../Box'
+import { Stack } from '../Stack'
 import { Imposter as ImposterPrimitive } from './Imposter'
 
 export default {

@@ -1,5 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
+
 import { SampleBox } from 'storybook/SampleBox'
+
 import { Cluster as ClusterPrimitive } from './Cluster'
 
 export default {

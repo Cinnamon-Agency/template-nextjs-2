@@ -1,4 +1,5 @@
 import { ComponentProps, ReactNode } from 'react'
+
 import { Head } from 'components/utils'
 
 type Props = ComponentProps<typeof Head> & { children: ReactNode }

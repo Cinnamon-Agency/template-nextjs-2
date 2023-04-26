@@ -1,5 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
+
 import { SampleBox } from 'storybook/SampleBox'
+
 import { Center as CenterPrimitive } from './Center'
 
 export default {

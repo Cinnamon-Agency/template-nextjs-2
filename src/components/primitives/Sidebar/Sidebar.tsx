@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
-import { CompositeComponent } from 'types/components'
 import { CSSProperties } from 'react'
+
 import { GapFn, GapProp } from 'styles/theme'
+import { CompositeComponent } from 'types/components'
 
 interface AsideProps {
 	/**

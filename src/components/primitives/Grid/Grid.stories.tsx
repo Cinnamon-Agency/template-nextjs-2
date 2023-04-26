@@ -1,5 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
+
 import { SampleBox } from 'storybook/SampleBox'
+
 import { Grid as GridPrimitive } from './Grid'
 
 export default {

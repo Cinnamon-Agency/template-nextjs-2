@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+
 import { FlexFn, FlexProps, GapProp } from 'styles/theme'
 
 type Props = GapProp & Pick<FlexProps, 'direction' | 'align' | 'justify'>

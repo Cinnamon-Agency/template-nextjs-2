@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
+
 import { Box as BoxPrimitive } from './Box'
 
 export default {

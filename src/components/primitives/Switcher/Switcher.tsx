@@ -1,7 +1,8 @@
-import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import type { CSSInterpolation } from '@emotion/serialize'
+import styled from '@emotion/styled'
 import { CSSProperties } from 'react'
+
 import { GapFn, GapProp } from 'styles/theme'
 
 type Props = GapProp & SwitcherProps

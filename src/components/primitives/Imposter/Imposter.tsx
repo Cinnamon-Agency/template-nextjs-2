@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import type { CSSInterpolation } from '@emotion/serialize'
+import styled from '@emotion/styled'
 import { PropsWithChildren } from 'react'
 
 type Layout = 'centered' | 'filled'
