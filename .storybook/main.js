@@ -11,11 +11,6 @@ module.exports = {
 	},
 	webpackFinal: async (config, { configType }) => {
 		config.resolve.modules = [path.resolve(__dirname, '..', 'src'), 'node_modules']
-		config.resolve.alias = {
-			'@emotion/core': toPath('node_modules/@emotion/react'),
-			'@emotion/styled': toPath('node_modules/@emotion/styled'),
-			'emotion-theming': toPath('node_modules/@emotion/react')
-		}
 
 		return config
 	}
