@@ -1,38 +1,63 @@
-## Next Template
+# Next.js Template
 
-Starter project made by www.cinnamon.agency
+This is a starter template for building web applications using Next.js, React.js, TypeScript, and Emotion.js.
+It includes configuration files for Prettier, ESLint and Husky, and also includes Storybook for visual testing of components.
 
-## Prequisite
+## Installation
 
-Having Node.js 12.22.0 or later installed.
+To use this starter template, click on the "Use this template" on the [GitHub](https://github.com/Cinnamon-Agency/template-nextjs-internal) or you can simply clone this repository:
 
-## Setup
-
-- git clone the repo with `git clone https://github.com/Cinnamon-Agency/template-nextjs.git`
-- install dependencies by running `yarn install` in repo root.
-- set up the `.env` file
-
-## Important Step for import sorter
-Add this in VSC settings
-
-```Javascript
-{
-  "editor.formatOnSave": true,
-  "eslint.validate": [
-    "typescript"
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
-
-  }
-}
 ```
-if you are not using VSC, use script command
+git clone git@github.com:Cinnamon-Agency/template-nextjs-internal.git
+```
 
-more about the topic here:
-https://medium.com/weekly-webtips/how-to-sort-imports-like-a-pro-in-typescript-4ee8afd7258a
-## Scripts
+Then, install the dependencies:
 
-- `yarn dev` - runs project in development mode
-- `yarn build` - builds the application for production
+```
+yarn install
+```
+
+## Usage 
+
+To start the development server, run:
+
+```
+yarn dev
+```
+
+This will start the development server on http://localhost:3000.
+
+To run Storybook, run:
+
+```
+yarn storybook
+```
+
+This will start the Storybook server on http://localhost:6006.
+
+To build the project for production, run:
+
+```
+yarn build
+```
+
+This will create an optimized build of the project in the out directory.
+
+To run the optimized production build, run
+
+```
+yarn start
+```
+
+## Configuration
+
+This starter template includes configuration files for ESLint, Prettier and Husky.
+
+- ESLint statically analyzes your code to quickly find problems
+- Prettier is a code formatter that ensures consistent code style across the project
+- Husky is a git hook manager that ensures that certain scripts are run before commits
+
+## Docs
+
+- [Development Process](./docs/development_process.md)
+- [Pull Request Naming](./docs/pull_request_naming.md)
