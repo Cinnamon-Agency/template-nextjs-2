@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
+
 import { Flexbox as FlexboxPrimitive } from './Flexbox'
 
 export default {

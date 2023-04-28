@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
+
 import { FlexFn, FlexProps } from 'styles/theme'
+
 import { Box } from '../Box'
 
 /**

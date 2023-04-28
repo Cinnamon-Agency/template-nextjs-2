@@ -1,5 +1,12 @@
-import { MetaTags } from 'models'
 import NextHead from 'next/head'
+
+interface MetaTags {
+	title: string
+	description: string
+	url?: string
+	image?: string
+	type?: string
+}
 
 type Props = { metaTags: MetaTags }
 
@@ -10,20 +17,24 @@ export const Head = ({ metaTags }: Props) => {
 		<NextHead>
 			<title>{title}</title>
 			<meta name="description" content={description} />
-			<meta property="og:url" content={url} />
+			{url && <meta property="og:url" content={url} />}
 			<meta charSet="utf-8" />
 			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:title" content={title} key={title} />
 			<meta name="twitter:description" content={description} />
-			<meta name="twitter:image" content={image} key={image} />
-			<meta name="twitter:image:alt" content="blog thumbnail_image" />
+			{image && (
+				<>
+					<meta name="twitter:image" content={image} key={image} />
+					<meta name="twitter:image:alt" content={title} />
+				</>
+			)}
 
 			<meta property="og:type" content={type || 'website'} />
 			<meta property="og:title" content={title} />
 			<meta property="og:description" content={description} />
-			<meta property="og:image" content={image} />
+			{image && <meta property="og:image" content={image} />}
 		</NextHead>
 	)
 }

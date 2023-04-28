@@ -1,23 +1,24 @@
 import styled from '@emotion/styled'
+
 import {
 	BorderFn,
 	BorderProps,
 	BreakpointsFn,
 	BreakpointsProps,
+	CSSFn,
+	CSSProp,
 	ColorFn,
 	ColorProps,
 	CornersFn,
 	CornersProp,
-	CSSFn,
-	CSSProp,
 	PaddingFn,
 	PaddingProps,
 	ShadowFn,
 	ShadowProp,
 	SizesFn,
 	SizesProps,
-	zIndexFn,
-	ZIndexProp
+	ZIndexProp,
+	zIndexFn
 } from 'styles/theme'
 
 type Props = PaddingProps &
