@@ -1,0 +1,47 @@
+import { Box } from './Box'
+import { Canvas, Meta } from '@storybook/addon-docs'
+
+<Meta title="UI/Layout/Box/Docs" />
+
+# Box
+
+`Box` component is a versatile and flexible container that allows you to easily create and organize layout elements within your application.
+It's designed to simplify the process of creating and managing layout elements, by providing a variety of props and styles that you can use to customize its appearance and behavior.
+
+Think of it like a virtual box or container that you can place other components or elements inside.
+Additionally, you can customize its appearance and behavior by setting properties like padding, borders, background color, and more.
+
+Overall, the Box component is a powerful tool that makes it easy for developers to create and manage layout elements in their application.
+By using it, you can streamline your development process and create more responsive and visually appealing user interfaces.
+
+## Basic Usage
+
+Box becomes padded when `padding` prop is passed to it.
+
+```jsx
+<Box padding="large">I am padded Box</Box>
+```
+
+## Responsive Padding
+
+Padding properties can also take an object to change the padding values based on device sizes/breakpoints.
+
+```jsx
+<Box paddingX={{ mobile: 'small', tablet: 'medium', desktop: 'xlarge' }}>
+	Simple Box component with padding that changes based on screen size
+</Box>
+```
+
+## As Component
+
+By default, the `Box` component renders a `div` element.
+However, by setting the `as` property to a different HTML element, you can change the type of element that is rendered.
+For example, you can set `as="a"` to render an anchor element instead of a `div`.
+
+All the anchor props will be inferred and available to the component.
+
+```jsx
+<Box as="a" href="#" target="_self" padding="medium">
+	This Box will act as HTML anchor
+</Box>
+```
