@@ -1,0 +1,57 @@
+import { Stack } from './Stack'
+import { Canvas, Meta } from '@storybook/addon-docs'
+
+<Meta title="UI/Layout/Stack/Docs" />
+
+# Stack
+
+`Stack` is a layout component used to group elements together and apply a vertical space between them.
+
+## Spacing
+
+The spacing between children can be adjusted using the `gap` prop.
+
+Responsive values are supported, e.g. `gap={{ mobile: 'small', tablet: 'medium', desktop: 'large' }}`
+
+```jsx
+<Stack
+	gap={{
+		mobile: 'small',
+		tablet: 'medium',
+		desktop: 'large'
+	}}>
+	<div />
+	<div />
+	<div />
+</Stack>
+```
+
+## Horizontal alignment
+
+Items can be aligned horizontally using the `alignItems` prop.
+Responsive values are supported, e.g. `alignItems={{ mobile: 'center', tablet: 'left' }}`
+
+```jsx
+<Stack gap="md" alignItems={{ mobile: 'center', tablet: 'left' }}>
+	<div />
+	<div />
+	<div />
+</Stack>
+```
+
+## Nested Stacks
+
+You can also nest stacks to achive desired layouts.
+
+```jsx
+<Stack gap="xlarge">
+	<div />
+	<div />
+	<div />
+	<Stack gap="small">
+		<div />
+		<div />
+		<div />
+	</Stack>
+</Stack>
+```

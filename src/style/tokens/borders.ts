@@ -9,9 +9,9 @@ export const borders = {
 		full: '100%'
 	},
 	width: {
-		small: '1px',
+		thin: '1px',
 		medium: '1.5px',
-		large: '2px'
+		thick: '2px'
 	},
 	color: {
 		'primary.main': colors['primary.main'],
