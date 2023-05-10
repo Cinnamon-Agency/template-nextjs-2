@@ -33,7 +33,7 @@ const responsiveProperties = defineProperties({
 })
 
 // Following properties work on all device sizes and can't be changed.
-export const staticProperties = defineProperties({
+const staticProperties = defineProperties({
 	properties: {
 		overflow: ['visible', 'hidden', 'scroll', 'auto'],
 		position: ['static', 'relative', 'absolute', 'fixed', 'sticky'],

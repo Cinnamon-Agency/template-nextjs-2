@@ -18,14 +18,11 @@ const breakpointQuery = {
 	desktop: `screen and (min-width: ${breakpoints.desktop}px)`
 }
 
+// This works but needs to be clearer
 const makeMediaQuery =
 	(mediaQuery: string) =>
 	(styles?: CSSProps): CSSProps =>
-		!styles || Object.keys(styles).length === 0
-			? {}
-			: {
-					[`@media ${mediaQuery}`]: styles
-			  }
+		!styles || Object.keys(styles).length === 0 ? {} : { [`@media ${mediaQuery}`]: styles }[`@media ${mediaQuery}`]
 
 const mediaQueryMap: MediaQueryMap = {
 	mobile: makeMediaQuery(breakpointQuery.mobile),
@@ -53,9 +50,11 @@ export const responsiveStyle = ({ mobile, tablet, desktop }: ResponsiveStyle): C
 		}
 
 		if (desktop) {
-			styles['@media'][breakpointQuery.desktop] = mediaQueryMap.tablet(desktop)
+			styles['@media'][breakpointQuery.desktop] = mediaQueryMap.desktop(desktop)
 		}
 	}
+
+	console.log('Styles ', styles)
 
 	return styles
 }
