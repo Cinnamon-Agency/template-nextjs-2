@@ -23,7 +23,10 @@ const responsiveProperties = defineProperties({
 		paddingTop: tokens.spacing,
 		paddingBottom: tokens.spacing,
 		paddingLeft: tokens.spacing,
-		paddingRight: tokens.spacing
+		paddingRight: tokens.spacing,
+		// Typography tokens
+		fontSize: tokens.typography.size,
+		textAlign: ['left', 'right', 'center', 'justify']
 	},
 	shorthands: {
 		padding: ['paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight'],
@@ -47,14 +50,12 @@ const staticProperties = defineProperties({
 		borderColor: tokens.borders.color,
 		zIndex: tokens.indices,
 		// Typography tokens
-		textAlign: ['left', 'right', 'center', 'justify'],
 		textTransform: ['none', 'capitalize', 'uppercase', 'lowercase'],
-		textDecoration: ['none', 'underline', 'overline'],
+		textDecoration: ['none', 'underline'],
 		fontStyle: ['normal', 'italic'],
 		lineHeight: tokens.typography.lineHeight,
 		fontWeight: tokens.typography.weight,
-		fontFamily: tokens.typography.family,
-		fontSize: tokens.typography.size
+		fontFamily: tokens.typography.family
 	}
 })
 
