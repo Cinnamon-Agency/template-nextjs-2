@@ -13,6 +13,7 @@ const responsiveProperties = defineProperties({
 		desktop: { '@media': `screen and (min-width: ${breakpoints.desktop}px)` }
 	},
 	defaultCondition: 'mobile',
+	responsiveArray: ['mobile', 'tablet', 'desktop'],
 	properties: {
 		display: ['none', 'inline', 'block', 'inline-block', 'flex', 'inline-flex'],
 		flexDirection: ['row', 'column', 'column-reverse', 'row-reverse'],

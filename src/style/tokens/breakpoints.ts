@@ -1,3 +1,5 @@
+export const breakpointNames = ['mobile', 'tablet', 'desktop']
+
 export const breakpoints = {
 	mobile: '0',
 	tablet: '768',
