@@ -1,7 +1,11 @@
-import React, { ComponentProps } from 'react'
+import { ReactNode } from 'react'
 
 import { Text } from '../text/Text'
+import { TextAtomsProps } from '../types'
 
-type Props = Omit<ComponentProps<typeof Text>, 'variant'> & { variant: 'h1' | 'h2' | 'h3' | 'h4' }
+interface Props extends TextAtomsProps {
+	variant: 'h1' | 'h2' | 'h3' | 'h4'
+	children: ReactNode
+}
 
 export const Heading = ({ variant, ...rest }: Props) => <Text as={variant} variant={variant} {...rest} />

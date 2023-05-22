@@ -1,5 +1,6 @@
 import { breakpoints } from '../tokens/breakpoints'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type CSSProps = Record<string, any>
 
 interface ResponsiveStyle {
@@ -53,8 +54,6 @@ export const responsiveStyle = ({ mobile, tablet, desktop }: ResponsiveStyle): C
 			styles['@media'][breakpointQuery.desktop] = mediaQueryMap.desktop(desktop)
 		}
 	}
-
-	console.log('Styles ', styles)
 
 	return styles
 }
