@@ -16,6 +16,45 @@ const config: StorybookConfig = {
 	},
 	docs: {
 		autodocs: 'tag'
+	},
+	// https://github.com/storybookjs/storybook/issues/18557
+	webpackFinal: async config => {
+		const imageRule = config.module?.rules?.find(rule => {
+			const test = (rule as { test: RegExp }).test
+
+			if (!test) {
+				return false
+			}
+
+			return test.test('.svg')
+		}) as { [key: string]: any }
+
+		imageRule.exclude = /\.svg$/
+
+		config.module?.rules?.push({
+			test: /\.svg$/,
+			use: [
+				{
+					loader: '@svgr/webpack',
+					options: {
+						svgoConfig: {
+							plugins: [
+								{
+									name: 'preset-default',
+									params: {
+										overrides: {
+											removeViewBox: false
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		})
+
+		return config
 	}
 }
 export default config
