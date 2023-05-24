@@ -6,10 +6,8 @@ export const spacing = {
 	medium: '1rem',
 	big: '1.25rem',
 	xbig: '1.5rem',
-	xxbig: '1.75rem',
-	xxxbig: '2rem',
+	xxbig: '2rem',
 	large: '2.5rem',
 	xlarge: '3rem',
-	xxlarge: '4rem',
-	xxxlarge: '6rem'
+	xxlarge: '4rem'
 }

@@ -8,5 +8,5 @@ interface Props {
 }
 
 export const InlineIcon = ({ icon: Icon, color }: Props) => {
-	return <Icon width="0.75em" height="0.75em" className={atoms({ color })} />
+	return <Icon width="1em" height="1em" className={atoms({ color })} />
 }
