@@ -1,13 +1,14 @@
 export const typography = {
 	size: {
+		xxsmall: '0.625rem',
 		xsmall: '0.75rem',
 		small: '0.875rem',
 		medium: '1rem',
-		large: '1.125rem',
-		xlarge: '1.25rem',
-		xxlarge: '1.5rem',
-		xxxlarge: '2rem',
-		xxxxlarge: '2.5rem'
+		big: '1.125rem',
+		xbig: '1.25rem',
+		xxbig: '1.5rem',
+		large: '1.75rem',
+		xlarge: '2rem'
 	},
 	weight: {
 		regular: '400',
@@ -18,9 +19,5 @@ export const typography = {
 		small: '100%',
 		medium: '132%',
 		large: '148%'
-	},
-	family: {
-		body: 'Helvetica, sans-serif',
-		heading: 'Helvetica, sans-serif'
 	}
 }
