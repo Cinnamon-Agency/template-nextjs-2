@@ -54,8 +54,7 @@ const staticProperties = defineProperties({
 		textDecoration: ['none', 'underline'],
 		fontStyle: ['normal', 'italic'],
 		lineHeight: tokens.typography.lineHeight,
-		fontWeight: tokens.typography.weight,
-		fontFamily: tokens.typography.family
+		fontWeight: tokens.typography.weight
 	}
 })
 
