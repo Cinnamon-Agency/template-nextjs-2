@@ -7,7 +7,7 @@ import { filterAtomsFromNativeAttributes } from 'style/utils/filterAtomsFromNati
 
 import { TextAtomsProps } from '../types'
 
-type Variant = 'bodytext' | 'h1' | 'h2' | 'h3' | 'h4'
+type Variant = 'bodytext' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5'
 
 type Common<E extends ElementType> = HTMLAttributes<E> & { as?: E; variant?: Variant } & TextAtomsProps
 
@@ -17,33 +17,33 @@ type Props<E extends ElementType> = E extends keyof JSX.IntrinsicElements
 
 const defaultStylesMap: Record<Variant, Atoms> = {
 	bodytext: {
-		fontFamily: 'body',
 		fontWeight: 'regular',
 		fontSize: 'medium',
 		lineHeight: 'large'
 	},
 	h1: {
-		fontFamily: 'heading',
-		fontWeight: 'bold',
-		fontSize: { mobile: 'xxlarge', tablet: 'xxxlarge' },
-		lineHeight: 'medium'
-	},
-	h2: {
-		fontFamily: 'heading',
-		fontWeight: 'bold',
-		fontSize: { mobile: 'xlarge', tablet: 'xxlarge' },
-		lineHeight: 'medium'
-	},
-	h3: {
-		fontFamily: 'heading',
 		fontWeight: 'bold',
 		fontSize: { mobile: 'large', tablet: 'xlarge' },
 		lineHeight: 'medium'
 	},
-	h4: {
-		fontFamily: 'heading',
+	h2: {
 		fontWeight: 'bold',
-		fontSize: { mobile: 'medium', tablet: 'large' },
+		fontSize: { mobile: 'xxbig', tablet: 'large' },
+		lineHeight: 'medium'
+	},
+	h3: {
+		fontWeight: 'bold',
+		fontSize: { mobile: 'xbig', tablet: 'xxbig' },
+		lineHeight: 'medium'
+	},
+	h4: {
+		fontWeight: 'bold',
+		fontSize: { mobile: 'big', tablet: 'xbig' },
+		lineHeight: 'medium'
+	},
+	h5: {
+		fontWeight: 'bold',
+		fontSize: 'small',
 		lineHeight: 'medium'
 	}
 }
