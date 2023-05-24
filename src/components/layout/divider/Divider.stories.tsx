@@ -13,9 +13,9 @@ export default {
 export const Default: StoryFn<ComponentProps<typeof Divider>> = () => {
 	return (
 		<Stack gap="medium">
-			<Box style={{ height: '50px' }} backgroundColor="neutral.light" />
+			<Box style={{ height: '50px', border: '1px solid' }} />
 			<Divider />
-			<Box style={{ height: '50px' }} backgroundColor="info.light" />
+			<Box style={{ height: '50px', border: '1px solid' }} />
 		</Stack>
 	)
 }

@@ -20,7 +20,7 @@ Playground.args = {
 	lineHeight: 'large',
 	fontWeight: 'regular',
 	textAlign: 'left',
-	color: 'common.black',
+	color: 'shades.100',
 	textTransform: 'none',
 	textDecoration: 'none',
 	fontStyle: 'normal'

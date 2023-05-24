@@ -8,5 +8,5 @@ globalStyle('*', {
 })
 
 globalStyle('h1, h2, h3, h4, p, span, strong', {
-	color: tokens.colors['common.black']
+	color: tokens.colors['shades.100']
 })

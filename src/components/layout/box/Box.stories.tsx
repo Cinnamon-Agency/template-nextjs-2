@@ -37,10 +37,10 @@ export const WithComponentAs = () => (
 
 export const WithFlexProperties = () => (
 	<Box display="flex" justifyContent="space-between" padding="xlarge" boxShadow="medium" borderRadius="medium">
-		<Box padding="xxlarge" backgroundColor="primary.dark" color="primary.light" borderRadius="full">
+		<Box padding="xxlarge" borderRadius="full">
 			Left
 		</Box>
-		<Box padding="xxlarge" backgroundColor="secondary.dark" color="secondary.light" borderRadius="full">
+		<Box padding="xxlarge" borderRadius="full">
 			Right
 		</Box>
 	</Box>

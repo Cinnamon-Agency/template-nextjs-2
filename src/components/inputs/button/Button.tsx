@@ -3,7 +3,7 @@
 import classnames from 'classnames'
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
 
-import { ButtonVariants, base } from './Button.css'
+import { ButtonVariants, button } from './Button.css'
 
 // Required props for both button and anchor
 type RequiredProps = { children: ReactNode }
@@ -24,7 +24,7 @@ export const Button = ({ variant = 'primary', size = 'large', href, className, .
 		return (
 			<a
 				href={href}
-				className={classnames(base({ variant, size }), className)}
+				className={classnames(button({ variant, size }), className)}
 				style={{ textDecoration: 'none' }}
 				{...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
 			/>
@@ -33,7 +33,7 @@ export const Button = ({ variant = 'primary', size = 'large', href, className, .
 
 	return (
 		<button
-			className={classnames(base({ variant, size }), className)}
+			className={classnames(button({ variant, size }), className)}
 			{...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
 		/>
 	)

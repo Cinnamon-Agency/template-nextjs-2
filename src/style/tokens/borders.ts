@@ -14,7 +14,6 @@ export const borders = {
 		thick: '2px'
 	},
 	color: {
-		'primary.main': colors['primary.main'],
-		'secondary.main': colors['secondary.main']
+		'shades.100': colors['shades.100']
 	}
 }

@@ -2,7 +2,7 @@ import { RecipeVariants, recipe } from '@vanilla-extract/recipes'
 
 import { tokens } from 'style/theme.css'
 
-export const base = recipe({
+export const button = recipe({
 	base: {
 		display: 'inline-flex',
 		alignItems: 'center',
@@ -66,4 +66,4 @@ export const base = recipe({
 	}
 })
 
-export type ButtonVariants = RecipeVariants<typeof base>
+export type ButtonVariants = RecipeVariants<typeof button>

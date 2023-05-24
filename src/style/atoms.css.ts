@@ -44,7 +44,6 @@ const staticProperties = defineProperties({
 		borderStyle: ['none', 'solid', 'dashed'],
 		color: tokens.colors,
 		backgroundColor: tokens.colors,
-		background: tokens.backgrounds,
 		boxShadow: tokens.shadows,
 		borderRadius: tokens.borders.radius,
 		borderWidth: tokens.borders.width,
