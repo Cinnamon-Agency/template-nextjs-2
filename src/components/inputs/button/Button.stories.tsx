@@ -80,6 +80,7 @@ export const Variants = () => {
 	)
 }
 
+// eslint-disable-next-line sonarjs/no-identical-functions
 export const LinkButton = ({ children, ...rest }: ComponentProps<typeof Button>) => {
 	return (
 		<Button {...rest}>
