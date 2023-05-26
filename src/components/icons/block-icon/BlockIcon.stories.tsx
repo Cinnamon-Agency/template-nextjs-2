@@ -8,6 +8,8 @@ export default {
 	component: BlockIcon
 }
 
+export const CalendarIcon = () => <BlockIcon icon={CalendarIconAsset} size="medium" />
+
 export const Sizes = () => {
 	return (
 		<Inline gap="medium">
