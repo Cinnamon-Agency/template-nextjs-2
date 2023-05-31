@@ -29,12 +29,12 @@ const defaultStylesMap: Record<Variant, Atoms> = {
 	h2: {
 		fontWeight: 'bold',
 		fontSize: { mobile: 'xxbig', tablet: 'large' },
-		lineHeight: 'medium'
+		lineHeight: 'large'
 	},
 	h3: {
 		fontWeight: 'bold',
 		fontSize: { mobile: 'xbig', tablet: 'xxbig' },
-		lineHeight: 'medium'
+		lineHeight: 'large'
 	},
 	h4: {
 		fontWeight: 'bold',
