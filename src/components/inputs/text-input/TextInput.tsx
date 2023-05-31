@@ -2,9 +2,8 @@
 import classnames from 'classnames'
 import { InputHTMLAttributes } from 'react'
 
-import { tokens } from 'style/theme.css'
-
-import { endIconSpacing, iconSlot, input, inputHasError, inputWrapper, startIconSpacing } from './TextInput.css'
+import { InputWrapper } from '../input-wrapper'
+import { endIconSpacing, input, inputHasError, startIconSpacing } from '../input-wrapper/InputWrapper.css'
 
 interface CustomInputProps {
 	hasError?: boolean
@@ -16,12 +15,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> & CustomInputProps
 
 export const TextInput = ({ hasError, startIcon, endIcon, ...rest }: Props) => {
 	return (
-		<div className={inputWrapper}>
-			{startIcon && (
-				<div className={iconSlot} style={{ left: tokens.spacing.small }}>
-					{startIcon}
-				</div>
-			)}
+		<InputWrapper startIcon={startIcon} endIcon={endIcon}>
 			<input
 				{...rest}
 				className={classnames(
@@ -31,11 +25,6 @@ export const TextInput = ({ hasError, startIcon, endIcon, ...rest }: Props) => {
 					startIcon && startIconSpacing
 				)}
 			/>
-			{endIcon && (
-				<div className={iconSlot} style={{ right: tokens.spacing.small }}>
-					{endIcon}
-				</div>
-			)}
-		</div>
+		</InputWrapper>
 	)
 }
