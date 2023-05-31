@@ -9,10 +9,16 @@ import { select } from './Select.css'
 import { InputWrapper } from '../input-wrapper'
 import { endIconSpacing, input, inputHasError, startIconSpacing } from '../input-wrapper/InputWrapper.css'
 
+interface Option {
+	value: string
+	label: string
+	disabled?: boolean
+}
+
 interface CustomInputProps {
 	hasError?: boolean
 	startIcon?: JSX.Element
-	options: Array<string>
+	options: Array<Option>
 }
 
 type Props = InputHTMLAttributes<HTMLSelectElement> & CustomInputProps
@@ -24,7 +30,9 @@ export const Select = ({ hasError, startIcon, options, ...rest }: Props) => {
 				{...rest}
 				className={classnames(select, input, hasError && inputHasError, endIconSpacing, startIcon && startIconSpacing)}>
 				{options.map(option => (
-					<option key={option}>{option}</option>
+					<option key={option.value} value={option.value} disabled={option.disabled}>
+						{option.label}
+					</option>
 				))}
 			</select>
 		</InputWrapper>

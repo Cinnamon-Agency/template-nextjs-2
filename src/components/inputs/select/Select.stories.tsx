@@ -10,7 +10,11 @@ export default {
 	component: Select
 }
 
-const options = ['A', 'B', 'C']
+const options = [
+	{ value: 'A', label: 'A', disabled: false },
+	{ value: 'B', label: 'B', disabled: false },
+	{ value: 'C', label: 'C', disabled: false }
+]
 
 export const Playground = () => {
 	const [value, setValue] = useState('')
