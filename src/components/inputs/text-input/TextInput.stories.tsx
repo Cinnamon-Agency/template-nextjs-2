@@ -10,7 +10,7 @@ export default {
 	component: TextInput
 }
 
-export const Playground = () => {
+export const Default = () => {
 	const [value, setValue] = useState('')
 
 	const onChange = (e: ChangeEvent<HTMLInputElement>) => {

@@ -16,7 +16,7 @@ const options = [
 	{ value: 'C', label: 'C', disabled: false }
 ]
 
-export const Playground = () => {
+export const Default = () => {
 	const [value, setValue] = useState('')
 
 	const onChange = (e: ChangeEvent<HTMLSelectElement>) => {

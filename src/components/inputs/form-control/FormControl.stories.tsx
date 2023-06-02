@@ -9,7 +9,7 @@ export default {
 	component: FormControl
 }
 
-export const Playground = () => {
+export const Default = () => {
 	return (
 		<Stack gap="medium">
 			<FormControl>
