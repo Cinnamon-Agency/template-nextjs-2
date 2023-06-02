@@ -5,6 +5,8 @@ import { Stack } from 'components/layout/stack'
 import { Text } from 'components/typography/text'
 
 import { Label } from '../label'
+import { NumericInput } from '../numeric-input'
+import { PatternInput } from '../pattern-input'
 import { Select } from '../select'
 import { TextInput } from '../text-input'
 
@@ -13,7 +15,7 @@ type Props = { children: ReactNode }
 export const FormControl = ({ children }: Props) => {
 	const label = getChildByType(children, [FormControl.Label])
 	const errorMessage = getChildByType(children, [FormControl.Error])
-	const input = getChildByType(children, [TextInput, Select])
+	const input = getChildByType(children, [TextInput, Select, NumericInput, PatternInput])
 
 	return (
 		<div>
