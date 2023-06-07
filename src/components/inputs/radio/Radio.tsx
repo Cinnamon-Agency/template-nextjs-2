@@ -25,8 +25,8 @@ export const Radio = ({ label, value, name, checked, onChange }: Props) => {
 					name={name}
 					value={value}
 					checked={checked}
-					className={styles.hiddenRadio}
 					onChange={onChange}
+					className={styles.hiddenRadio}
 				/>
 				<div className={styles.radioDecorator} style={{ color }} />
 				{checked && <div className={styles.checked} />}

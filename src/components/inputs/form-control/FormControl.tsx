@@ -4,6 +4,8 @@ import { getChildByType } from 'react-nanny'
 import { Stack } from 'components/layout/stack'
 import { Text } from 'components/typography/text'
 
+import { Checkbox } from '../checkbox'
+import { CheckboxGroup } from '../checkbox-group/CheckboxGroup'
 import { Label } from '../label'
 import { NumericInput } from '../numeric-input'
 import { PatternInput } from '../pattern-input'
@@ -17,7 +19,16 @@ type Props = { children: ReactNode }
 export const FormControl = ({ children }: Props) => {
 	const label = getChildByType(children, [FormControl.Label])
 	const errorMessage = getChildByType(children, [FormControl.Error])
-	const input = getChildByType(children, [TextInput, Select, NumericInput, PatternInput, Radio, RadioGroup])
+	const input = getChildByType(children, [
+		TextInput,
+		Select,
+		NumericInput,
+		PatternInput,
+		Radio,
+		RadioGroup,
+		Checkbox,
+		CheckboxGroup
+	])
 
 	return (
 		<div>
