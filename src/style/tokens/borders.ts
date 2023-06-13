@@ -14,6 +14,7 @@ export const borders = {
 		thick: '2px'
 	},
 	color: {
-		'shades.100': colors['shades.100']
+		'shades.100': colors['shades.100'],
+		'neutral.200': colors['neutral.200']
 	}
 }
