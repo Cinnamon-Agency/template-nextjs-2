@@ -1,69 +1,75 @@
 {
-	"name": "next-template",
-	"version": "0.0.0",
-	"private": true,
-	"dependencies": {
-		"@emotion/react": "11.9.3",
-		"@emotion/styled": "11.9.3",
-		"dotenv": "16.0.1",
-		"emotion-normalize": "11.0.1",
-		"emotion-reset": "3.0.1",
-		"next": "12.1.6",
-		"react": "18.2.0",
-		"react-dom": "18.2.0"
-	},
-	"devDependencies": {
-		"@emotion/babel-plugin": "11.9.2",
-		"@next/bundle-analyzer": "12.1.6",
-		"@storybook/addon-actions": "^6.5.9",
-		"@storybook/addon-essentials": "^6.5.9",
-		"@storybook/addon-interactions": "^6.5.9",
-		"@storybook/addon-links": "^6.5.9",
-		"@storybook/builder-webpack5": "^6.5.9",
-		"@storybook/manager-webpack5": "^6.5.9",
-		"@storybook/react": "^6.5.9",
-		"@storybook/testing-library": "^0.0.13",
-		"@types/node": "18.0.0",
-		"@types/react": "18.0.14",
-		"@typescript-eslint/eslint-plugin": "^5.45.0",
-		"@typescript-eslint/parser": "5.29.0",
-		"cross-env": "7.0.3",
-		"eslint": "^8.28.0",
-		"eslint-config-airbnb": "^19.0.4",
-		"eslint-config-next": "13.0.5",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-jsx-a11y": "6.5.1",
-		"eslint-plugin-prettier": "4.0.0",
-		"eslint-plugin-react": "7.30.1",
-		"eslint-plugin-react-hooks": "4.6.0",
-		"eslint-plugin-security": "^1.5.0",
-		"eslint-plugin-sonarjs": "^0.16.0",
-		"husky": "8.0.1",
-		"lint-staged": "^13.0.4",
-		"prettier": "^2.8.0",
-		"typescript": "4.7.4"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*": "prettier --write"
-	},
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start -p 3400",
-		"analyze": "cross-env ANALYZE=true next build",
-		"analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
-		"analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
-		"prettier": "prettier --check .",
-		"format": "prettier --write .",
-		"lint": "next lint",
-		"lint:fix": "npm run lint -- --fix",
-		"storybook": "start-storybook -p 6006 -s ./public",
-		"build-storybook": "build-storybook -s public"
-	}
+  "name": "next-template",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@vanilla-extract/css": "1.11.0",
+    "@vanilla-extract/recipes": "0.4.0",
+    "@vanilla-extract/sprinkles": "1.6.0",
+    "classnames": "2.3.2",
+    "dotenv": "16.0.1",
+    "next": "13.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-nanny": "2.15.0",
+    "react-number-format": "5.2.2"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "12.1.6",
+    "@storybook/addon-essentials": "^7.0.8",
+    "@storybook/addon-interactions": "^7.0.8",
+    "@storybook/addon-links": "^7.0.8",
+    "@storybook/blocks": "^7.0.8",
+    "@storybook/nextjs": "^7.0.8",
+    "@storybook/react": "^7.0.8",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@svgr/webpack": "8.0.1",
+    "@types/node": "18.0.0",
+    "@types/react": "18.0.14",
+    "@typescript-eslint/eslint-plugin": "5.45.0",
+    "@typescript-eslint/parser": "5.29.0",
+    "@vanilla-extract/next-plugin": "2.1.2",
+    "@vanilla-extract/webpack-plugin": "^2.2.0",
+    "cross-env": "7.0.3",
+    "eslint": "8.28.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-next": "13.0.5",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-mdx": "^2.1.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.30.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-security": "1.5.0",
+    "eslint-plugin-sonarjs": "0.16.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.4",
+    "mini-css-extract-plugin": "1.6.2",
+    "prettier": "2.8.0",
+    "storybook": "^7.0.8",
+    "typescript": "4.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 3400",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
+    "prettier": "prettier --check .",
+    "format": "prettier --write .",
+    "lint": "next lint",
+    "lint:fix": "npm run lint -- --fix",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  }
 }
