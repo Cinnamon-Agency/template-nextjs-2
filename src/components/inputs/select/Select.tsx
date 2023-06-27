@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { InputHTMLAttributes } from 'react'
 
 import { BlockIcon } from 'components/icons/block-icon'
@@ -28,7 +28,7 @@ export const Select = ({ hasError, startIcon, options, ...rest }: Props) => {
 		<InputWrapper startIcon={startIcon} endIcon={<BlockIcon icon={CarretIcon} size="medium" />}>
 			<select
 				{...rest}
-				className={classnames(select, input, hasError && inputHasError, endIconSpacing, startIcon && startIconSpacing)}>
+				className={clsx(select, input, hasError && inputHasError, endIconSpacing, startIcon && startIconSpacing)}>
 				{options.map(option => (
 					<option key={option.value} value={option.value} disabled={option.disabled}>
 						{option.label}

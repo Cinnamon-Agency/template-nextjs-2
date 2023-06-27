@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable react/button-has-type */
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
 
 import { ButtonVariants, button } from './Button.css'
@@ -24,7 +24,7 @@ export const Button = ({ variant = 'primary', size = 'large', href, className, .
 		return (
 			<a
 				href={href}
-				className={classnames(button({ variant, size }), className)}
+				className={clsx(button({ variant, size }), className)}
 				style={{ textDecoration: 'none' }}
 				{...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
 			/>
@@ -33,7 +33,7 @@ export const Button = ({ variant = 'primary', size = 'large', href, className, .
 
 	return (
 		<button
-			className={classnames(button({ variant, size }), className)}
+			className={clsx(button({ variant, size }), className)}
 			{...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
 		/>
 	)

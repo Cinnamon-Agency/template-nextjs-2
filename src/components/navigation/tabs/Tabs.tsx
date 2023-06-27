@@ -1,4 +1,4 @@
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { FC, ReactNode } from 'react'
 import { getChildrenByType } from 'react-nanny'
 
@@ -44,7 +44,7 @@ Tabs.Tab = ({ value, children }: Tab) => {
 		<button
 			type="button"
 			onClick={() => onActiveTabChange(value)}
-			className={classnames(styles.tab, activeTab === value && styles.activeTab)}>
+			className={clsx(styles.tab, activeTab === value && styles.activeTab)}>
 			{children}
 		</button>
 	)
