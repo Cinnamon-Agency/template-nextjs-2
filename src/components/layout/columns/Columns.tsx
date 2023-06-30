@@ -1,26 +1,27 @@
-// import { ReactNode } from 'react'
-//
-// export const Columns = ({ children, gap }: { children: ReactNode; gap?: any }) => null
-//
-// Columns.Item = ({ columns }: { columns: any; children: string }) => null
-//
-// const ExampleComponent = () => {
-// 	return (
-// 		<div>
-// 			<Columns>
-// 				<Columns.Item columns={6}>Something</Columns.Item>
-// 				<Columns.Item columns={6}>Something</Columns.Item>
-// 			</Columns>
-// 			<Columns gap="small">
-// 				<Columns.Item columns={{ mobile: 12, tablet: 6 }}>Something</Columns.Item>
-// 				<Columns.Item columns={{ mobile: 12, tablet: 6 }}>Something</Columns.Item>
-// 			</Columns>
-// 			<Columns>
-// 				<Columns.Item columns={12}>Something</Columns.Item>
-// 				<Columns.Item columns={6}>Something</Columns.Item>
-// 				<Columns.Item columns={6}>Something</Columns.Item>
-// 			</Columns>
-// 		</div>
-// 	)
-// }
-export {}
+import clsx from 'clsx'
+import { FC, ReactNode } from 'react'
+
+import { Columns as ColumnsAtoms, columnsAtoms, grid } from './Columns.css'
+import { Atoms, atoms } from '../../../style/atoms.css'
+
+interface Props {
+	children: ReactNode
+	gap: Atoms['gap']
+}
+
+interface Item {
+	children: ReactNode
+	columns: ColumnsAtoms['columns']
+}
+
+interface ColumnsComposition {
+	Item: FC<Item>
+}
+
+export const Columns: FC<Props> & ColumnsComposition = ({ children, gap = 'medium' }: Props) => {
+	return <div className={clsx(grid, atoms({ gap }))}>{children}</div>
+}
+
+Columns.Item = ({ columns = 12, children }: Item) => {
+	return <div className={columnsAtoms({ columns })}>{children}</div>
+}
