@@ -9,7 +9,7 @@ import { Container } from '../../../components/layout/container'
 
 export const Navbar = () => {
 	return (
-		<Box backgroundColor="shades.100" paddingY="medium">
+		<div className={styles.navbar}>
 			<Container>
 				<Box display="flex" justifyContent="space-between" alignItems="center" gap="big">
 					<Image src="/cinnamon-logo.svg" alt="Home" width={160} height={20} />
@@ -33,6 +33,6 @@ export const Navbar = () => {
 					</Box>
 				</Box>
 			</Container>
-		</Box>
+		</div>
 	)
 }

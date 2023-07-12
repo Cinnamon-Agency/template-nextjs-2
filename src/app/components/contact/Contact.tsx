@@ -14,7 +14,7 @@ export const Contact = () => {
 			textAlign="center">
 			<Container>
 				<Stack gap="large">
-					<Text variant="h1">Have a project in mind? Let`&apos;`s work together.</Text>
+					<Text variant="h1">Have a project in mind? Let&apos;s work together.</Text>
 					<div>
 						<Button href="#">Contact Us</Button>
 					</div>
