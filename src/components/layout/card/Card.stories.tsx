@@ -1,11 +1,11 @@
 import { Card } from './Card'
 import { Button } from '../../inputs/button'
 import { Checkbox } from '../../inputs/checkbox'
-import { FormControl } from '../../inputs/form-control'
-import { PatternInput } from '../../inputs/pattern-input'
+// import { FormControl } from '../../inputs/form-control'
+// import { PatternInput } from '../../inputs/pattern-input'
 import { RadioGroup } from '../../inputs/radio-group'
-import { Select } from '../../inputs/select'
-import { TextInput } from '../../inputs/text-input'
+// import { Select } from '../../inputs/select'
+// import { TextInput } from '../../inputs/text-input'
 import { Text } from '../../typography/text'
 import { Box } from '../box'
 import { Stack } from '../stack'
@@ -18,18 +18,18 @@ export default {
 export const Basic = () => {
 	return (
 		<Card>
-			<FormControl>
-				<FormControl.Label>Name of the holiday</FormControl.Label>
-				<TextInput placeholder="Holiday name here" />
-			</FormControl>
-			<FormControl>
-				<FormControl.Label>Date</FormControl.Label>
-				<PatternInput format="##/##/####" placeholder="Enter date" />
-			</FormControl>
-			<FormControl>
-				<FormControl.Label>Office</FormControl.Label>
-				<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} />
-			</FormControl>
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Name of the holiday</FormControl.Label> */}
+			{/*	<TextInput placeholder="Holiday name here" /> */}
+			{/* </FormControl> */}
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Date</FormControl.Label> */}
+			{/*	<PatternInput format="##/##/####" placeholder="Enter date" /> */}
+			{/* </FormControl> */}
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Office</FormControl.Label> */}
+			{/*	<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} /> */}
+			{/* </FormControl> */}
 			<Checkbox label="Same every year" />
 			<Box display="flex" gap="small" alignItems="flex-start">
 				<Button variant="ghost">Cancel</Button>
@@ -44,18 +44,18 @@ export const Basic = () => {
 export const WithTitle = () => {
 	return (
 		<Card title="Holidays">
-			<FormControl>
-				<FormControl.Label>Name of the holiday</FormControl.Label>
-				<TextInput placeholder="Holiday name here" />
-			</FormControl>
-			<FormControl>
-				<FormControl.Label>Date</FormControl.Label>
-				<PatternInput format="##/##/####" placeholder="Enter date" />
-			</FormControl>
-			<FormControl>
-				<FormControl.Label>Office</FormControl.Label>
-				<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} />
-			</FormControl>
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Name of the holiday</FormControl.Label> */}
+			{/*	<TextInput placeholder="Holiday name here" /> */}
+			{/* </FormControl> */}
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Date</FormControl.Label> */}
+			{/*	<PatternInput format="##/##/####" placeholder="Enter date" /> */}
+			{/* </FormControl> */}
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Office</FormControl.Label> */}
+			{/*	<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} /> */}
+			{/* </FormControl> */}
 			<Checkbox label="Same every year" />
 			<Box display="flex" gap="small" alignItems="flex-start">
 				<Button variant="ghost">Cancel</Button>
@@ -72,18 +72,18 @@ export const WithTitleAndDivider = () => {
 		<Card title="Holidays">
 			<Card.Divider />
 			<Card.Body>
-				<FormControl>
-					<FormControl.Label>Name of the holiday</FormControl.Label>
-					<TextInput placeholder="Holiday name here" />
-				</FormControl>
-				<FormControl>
-					<FormControl.Label>Date</FormControl.Label>
-					<PatternInput format="##/##/####" placeholder="Enter date" />
-				</FormControl>
-				<FormControl>
-					<FormControl.Label>Office</FormControl.Label>
-					<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} />
-				</FormControl>
+				{/* <FormControl> */}
+				{/*	<FormControl.Label>Name of the holiday</FormControl.Label> */}
+				{/*	<TextInput placeholder="Holiday name here" /> */}
+				{/* </FormControl> */}
+				{/* <FormControl> */}
+				{/*	<FormControl.Label>Date</FormControl.Label> */}
+				{/*	<PatternInput format="##/##/####" placeholder="Enter date" /> */}
+				{/* </FormControl> */}
+				{/* <FormControl> */}
+				{/*	<FormControl.Label>Office</FormControl.Label> */}
+				{/*	<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} /> */}
+				{/* </FormControl> */}
 				<Checkbox label="Same every year" />
 				<Box display="flex" gap="small" alignItems="flex-start">
 					<Button variant="ghost">Cancel</Button>
@@ -140,28 +140,28 @@ export const WithExtras = () => {
 export const Nested = () => {
 	return (
 		<Card>
-			<FormControl>
-				<FormControl.Label>Department name</FormControl.Label>
-				<TextInput />
-			</FormControl>
-			<FormControl>
-				<FormControl.Label>Head of department</FormControl.Label>
-				<TextInput />
-			</FormControl>
-			<Card title="Teams">
-				<Card.Divider />
-				<Card.Body>
-					<FormControl>
-						<FormControl.Label>Department name</FormControl.Label>
-						<TextInput />
-					</FormControl>
-					<FormControl>
-						<FormControl.Label>Head of department</FormControl.Label>
-						<TextInput />
-					</FormControl>
-					<Checkbox label="Head of department is also Team Lead" />
-				</Card.Body>
-			</Card>
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Department name</FormControl.Label> */}
+			{/*	<TextInput /> */}
+			{/* </FormControl> */}
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Head of department</FormControl.Label> */}
+			{/*	<TextInput /> */}
+			{/* </FormControl> */}
+			{/* <Card title="Teams"> */}
+			{/*	<Card.Divider /> */}
+			{/*	<Card.Body> */}
+			{/*		<FormControl> */}
+			{/*			<FormControl.Label>Department name</FormControl.Label> */}
+			{/*			<TextInput /> */}
+			{/*		</FormControl> */}
+			{/*		<FormControl> */}
+			{/*			<FormControl.Label>Head of department</FormControl.Label> */}
+			{/*			<TextInput /> */}
+			{/*		</FormControl> */}
+			{/*		<Checkbox label="Head of department is also Team Lead" /> */}
+			{/*	</Card.Body> */}
+			{/* </Card> */}
 			<div>
 				<Button variant="ghost" size="small">
 					Add team

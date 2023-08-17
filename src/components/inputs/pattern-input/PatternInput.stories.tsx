@@ -1,7 +1,7 @@
 import { Stack } from 'components/layout/stack'
 
 import { PatternInput } from './PatternInput'
-import { FormControl } from '../form-control'
+// import { FormControl } from '../form-control'
 
 export default {
 	title: 'UI/Inputs/PatternInput',
@@ -11,18 +11,18 @@ export default {
 export const Default = () => {
 	return (
 		<Stack gap="medium">
-			<FormControl>
-				<FormControl.Label>Date</FormControl.Label>
-				<PatternInput format="##/##/####" mask="_" allowEmptyFormatting />
-			</FormControl>
-			<FormControl>
-				<FormControl.Label>Phone Number</FormControl.Label>
-				<PatternInput format="+385 ## ### ####" allowEmptyFormatting />
-			</FormControl>
-			<FormControl>
-				<FormControl.Label>OIB</FormControl.Label>
-				<PatternInput format="#### ### ####" allowEmptyFormatting />
-			</FormControl>
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Date</FormControl.Label> */}
+			{/*	<PatternInput format="##/##/####" mask="_" allowEmptyFormatting /> */}
+			{/* </FormControl> */}
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>Phone Number</FormControl.Label> */}
+			{/*	<PatternInput format="+385 ## ### ####" allowEmptyFormatting /> */}
+			{/* </FormControl> */}
+			{/* <FormControl> */}
+			{/*	<FormControl.Label>OIB</FormControl.Label> */}
+			{/*	<PatternInput format="#### ### ####" allowEmptyFormatting /> */}
+			{/* </FormControl> */}
 		</Stack>
 	)
 }
