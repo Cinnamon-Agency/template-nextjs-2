@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { ElementType, HTMLAttributes } from 'react'
 
 import { Atoms, atoms } from 'style/atoms.css'
@@ -59,5 +59,5 @@ export const Text = <E extends ElementType = 'p'>({ as, variant = 'bodytext', cl
 		...atomsProps
 	}
 
-	return <Element className={classnames(atoms(joinedAtoms), className)} {...elementNativeProps} />
+	return <Element className={clsx(atoms(joinedAtoms), className)} {...elementNativeProps} />
 }

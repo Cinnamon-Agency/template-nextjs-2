@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { InputHTMLAttributes } from 'react'
 
 import { InputWrapper } from '../input-wrapper'
@@ -18,12 +18,7 @@ export const TextInput = ({ hasError, startIcon, endIcon, ...rest }: Props) => {
 		<InputWrapper startIcon={startIcon} endIcon={endIcon}>
 			<input
 				{...rest}
-				className={classnames(
-					input,
-					hasError && inputHasError,
-					endIcon && endIconSpacing,
-					startIcon && startIconSpacing
-				)}
+				className={clsx(input, hasError && inputHasError, endIcon && endIconSpacing, startIcon && startIconSpacing)}
 			/>
 		</InputWrapper>
 	)

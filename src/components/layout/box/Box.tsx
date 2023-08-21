@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { ElementType, HTMLAttributes } from 'react'
 
 import { Atoms, atoms } from 'style/atoms.css'
@@ -15,5 +15,5 @@ export const Box = <E extends ElementType = 'div'>({ as, className, ...rest }: P
 	const Element = as || 'div'
 	const { atomsProps, elementNativeProps } = filterAtomsFromNativeAttributes(rest)
 
-	return <Element className={classnames(atoms(atomsProps), className)} {...elementNativeProps} />
+	return <Element className={clsx(atoms(atomsProps), className)} {...elementNativeProps} />
 }
