@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import { Columns } from '../../../components/layout/columns/Columns'
-import { Inline } from '../../../components/layout/inline'
-import { Stack } from '../../../components/layout/stack'
-import { Text } from '../../../components/typography/text'
-import type { Project } from '../../../services/contentful/api/project'
+import { Columns } from '@/components/layout/columns'
+import { Inline } from '@/components/layout/inline'
+import { Stack } from '@/components/layout/stack'
+import { Text } from '@/components/typography/text'
+import type { Project } from '@/services/contentful/api/project'
 
 type Props = { project: Project }
 

@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-import { tokens } from '../../../style/theme.css'
+import { tokens } from '@/style/theme.css'
 
 export const navbar = style({
 	paddingTop: tokens.spacing.medium,

@@ -1,10 +1,10 @@
-import { Button } from '../../../components/inputs/button'
-import { Box } from '../../../components/layout/box'
-import { Columns } from '../../../components/layout/columns/Columns'
-import { Container } from '../../../components/layout/container'
-import { Stack } from '../../../components/layout/stack'
-import { Heading } from '../../../components/typography/heading'
-import { Text } from '../../../components/typography/text'
+import { Button } from '@/components/inputs/button'
+import { Box } from '@/components/layout/box'
+import { Columns } from '@/components/layout/columns'
+import { Container } from '@/components/layout/container'
+import { Stack } from '@/components/layout/stack'
+import { Heading } from '@/components/typography/heading'
+import { Text } from '@/components/typography/text'
 
 export const AgileTeam = () => {
 	return (

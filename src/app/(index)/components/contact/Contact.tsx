@@ -1,8 +1,8 @@
-import { Button } from '../../../components/inputs/button'
-import { Box } from '../../../components/layout/box'
-import { Container } from '../../../components/layout/container'
-import { Stack } from '../../../components/layout/stack'
-import { Text } from '../../../components/typography/text'
+import { Button } from '@/components/inputs/button'
+import { Box } from '@/components/layout/box'
+import { Container } from '@/components/layout/container'
+import { Stack } from '@/components/layout/stack'
+import { Text } from '@/components/typography/text'
 
 export const Contact = () => {
 	return (

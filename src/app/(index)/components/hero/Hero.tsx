@@ -1,10 +1,11 @@
 import * as styles from './Hero.css'
-import { Box } from '../../../components/layout/box'
-import { Columns } from '../../../components/layout/columns'
-import { Container } from '../../../components/layout/container'
-import { Stack } from '../../../components/layout/stack'
-import { Pattern } from '../../../components/shared/pattern'
-import { Text } from '../../../components/typography/text'
+import { Box } from '@/components/layout/box'
+import { Columns } from '@/components/layout/columns'
+import { Container } from '@/components/layout/container'
+import { Stack } from '@/components/layout/stack'
+import { Text } from '@/components/typography/text'
+
+import { Pattern } from '@/components/custom/pattern'
 
 export const Hero = () => {
 	return (
