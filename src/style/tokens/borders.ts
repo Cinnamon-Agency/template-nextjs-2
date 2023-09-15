@@ -8,11 +8,12 @@ export const borders = {
 		large: '1.5rem',
 		full: '100%'
 	},
-	width: {
-		thin: '1px',
-		medium: '1.5px',
-		thick: '2px'
+	border: {
+		thin: '1px solid currentcolor',
+		medium: '1.5px solid currentcolor',
+		thick: '2px solid currentcolor'
 	},
+	// Use only specific colors for borders so we don't include all of the available colors to the build
 	color: {
 		'shades.100': colors['shades.100'],
 		'neutral.200': colors['neutral.200']
