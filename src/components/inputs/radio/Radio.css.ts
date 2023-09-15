@@ -25,7 +25,7 @@ export const radioField = style({
 
 export const radioDecorator = style({
 	borderColor: 'currentcolor',
-	borderWidth: tokens.borders.width.thick,
+	borderWidth: '2px',
 	borderRadius: tokens.borders.radius.full,
 	borderStyle: 'solid',
 	width: '1.5rem',

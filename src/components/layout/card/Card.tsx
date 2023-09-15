@@ -27,7 +27,7 @@ export const Card = ({ children, title }: Props) => {
 			backgroundColor="shades.00"
 			borderRadius="small"
 			padding="xbig"
-			borderWidth="thin"
+			border="thin"
 			borderStyle="solid"
 			borderColor="neutral.200">
 			<Stack gap="xbig">
