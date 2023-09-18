@@ -1,9 +1,9 @@
-import { Projects } from './Projects'
-
 import { Box } from '@/components/layout/box'
 import { Container } from '@/components/layout/container'
 import { Stack } from '@/components/layout/stack'
 import { LoadingBoundary } from '@/components/utils/loading-boundary'
+
+import { Projects } from './Projects'
 
 export const SuspendedProjects = () => {
 	return (

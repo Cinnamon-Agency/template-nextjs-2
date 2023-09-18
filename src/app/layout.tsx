@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 
 import '@/style/app.css'
+
 import { Footer } from '@/components/custom/footer'
 import { Navbar } from '@/components/custom/navbar'
 

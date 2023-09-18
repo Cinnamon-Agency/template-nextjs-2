@@ -2,11 +2,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import * as styles from './Navbar.css'
-
 import { Button } from '@/components/inputs/button'
 import { Box } from '@/components/layout/box'
 import { Container } from '@/components/layout/container'
+
+import * as styles from './Navbar.css'
 
 export const Navbar = () => {
 	return (

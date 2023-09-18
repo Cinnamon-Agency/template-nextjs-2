@@ -1,7 +1,7 @@
-import { ProjectCard } from './ProjectCard'
+import { Stack } from '@/components/layout/stack'
 import { fetchProjects } from '@/services/contentful/api/project'
 
-import { Stack } from '@/components/layout/stack'
+import { ProjectCard } from './ProjectCard'
 
 export const Projects = async () => {
 	const projects = await fetchProjects()
