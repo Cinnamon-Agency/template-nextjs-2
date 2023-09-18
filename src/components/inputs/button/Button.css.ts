@@ -6,6 +6,7 @@ export const button = recipe({
 	base: {
 		display: 'inline-flex',
 		alignItems: 'center',
+		justifyContent: 'center',
 		cursor: 'pointer',
 		border: 'none',
 		borderRadius: tokens.borders.radius.small,
