@@ -16,7 +16,7 @@ export const ProjectCard = ({ project }: Props) => {
 	))
 
 	return (
-		<Stack gap="medium" key={project.slug}>
+		<Stack gap={4} key={project.slug}>
 			{project.image !== null && (
 				<div style={{ backgroundColor: project.backgroundColor }}>
 					<Image
@@ -32,9 +32,9 @@ export const ProjectCard = ({ project }: Props) => {
 					/>
 				</div>
 			)}
-			<Inline gap="medium">{mappedTopics}</Inline>
+			<Inline gap={4}>{mappedTopics}</Inline>
 			<Text variant="h2" dangerouslySetInnerHTML={{ __html: project.title }} />
-			<Columns gap="none">
+			<Columns gap={0}>
 				<Columns.Item columns={{ mobile: 12, tablet: 8, desktop: 6 }}>
 					<Text color="neutral.500">{project.description}</Text>
 				</Columns.Item>

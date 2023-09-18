@@ -10,11 +10,11 @@ import { Pattern } from '@/components/custom/pattern'
 export const Hero = () => {
 	return (
 		<Pattern>
-			<Box paddingY="xxlarge">
+			<Box paddingY={16}>
 				<Container>
-					<Stack gap="xbig">
+					<Stack gap={6}>
 						<h1 className={styles.heroHeading}>Results focused design & development agency.</h1>
-						<Columns gap="medium">
+						<Columns gap={4}>
 							<Columns.Item columns={{ mobile: 12, tablet: 8, desktop: 6 }}>
 								<Text color="shades.00" fontSize="xbig">
 									Extend your team with our high performing specialists or hire us to shape your product from scratch.
@@ -25,7 +25,6 @@ export const Hero = () => {
 					</Stack>
 				</Container>
 			</Box>
-			<Box paddingY="xlarge" />
 		</Pattern>
 	)
 }

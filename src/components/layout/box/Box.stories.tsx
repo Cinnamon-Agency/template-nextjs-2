@@ -14,33 +14,33 @@ export const Playground: StoryFn<ComponentProps<typeof Box<'div'>>> = ({ childre
 
 Playground.args = {
 	children: 'You can play around with controls to change how I look!',
-	padding: 'xlarge'
+	padding: 10
 }
 
 export const WithPadding = () => (
-	<Box padding="xlarge" boxShadow="medium" borderRadius="medium">
+	<Box padding={4} boxShadow="medium" borderRadius="medium">
 		Simple Box component with &quot;xlarge&quot; padding
 	</Box>
 )
 
 export const WithResponsivePadding = () => (
-	<Box padding={{ mobile: 'small', tablet: 'medium', desktop: 'xlarge' }} boxShadow="medium" borderRadius="medium">
+	<Box padding={{ mobile: 2, tablet: 3, desktop: 4 }} boxShadow="medium" borderRadius="medium">
 		Simple Box component with padding that changes based on screen size
 	</Box>
 )
 
 export const WithComponentAs = () => (
-	<Box as="a" href="#" target="_self" padding="medium">
+	<Box as="a" href="#" target="_self" padding={4}>
 		This Box will act as HTML anchor
 	</Box>
 )
 
 export const WithFlexProperties = () => (
-	<Box display="flex" justifyContent="space-between" padding="xlarge" boxShadow="medium" borderRadius="medium">
-		<Box padding="xxlarge" borderRadius="full">
+	<Box display="flex" justifyContent="space-between" padding={4} boxShadow="medium" borderRadius="medium">
+		<Box padding={5} borderRadius="full">
 			Left
 		</Box>
-		<Box padding="xxlarge" borderRadius="full">
+		<Box padding={5} borderRadius="full">
 			Right
 		</Box>
 	</Box>

@@ -6,7 +6,7 @@ export const checkboxWrapper = style({
 	display: 'inline-flex',
 	alignItems: 'center',
 	cursor: 'pointer',
-	gap: tokens.spacing.small
+	gap: tokens.spacing[3]
 })
 
 export const hiddenCheckbox = style({

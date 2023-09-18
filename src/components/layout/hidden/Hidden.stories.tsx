@@ -9,24 +9,24 @@ export default {
 
 export const Default = () => {
 	return (
-		<Stack gap="xlarge">
+		<Stack gap={6}>
 			<Hidden below="desktop">
-				<Box padding="xlarge" borderRadius="medium" border="thick" borderStyle="dashed">
+				<Box padding={8} borderRadius="medium" border="thick" borderStyle="dashed">
 					1. Hidden below desktop
 				</Box>
 			</Hidden>
 			<Hidden below="tablet">
-				<Box padding="xlarge" borderRadius="medium" border="thick" borderStyle="dashed">
+				<Box padding={8} borderRadius="medium" border="thick" borderStyle="dashed">
 					2. Hidden below tablet
 				</Box>
 			</Hidden>
 			<Hidden above="mobile">
-				<Box padding="xlarge" borderRadius="medium" border="thick" borderStyle="dashed">
+				<Box padding={8} borderRadius="medium" border="thick" borderStyle="dashed">
 					3. Hidden above mobile
 				</Box>
 			</Hidden>
 			<Hidden above="tablet">
-				<Box padding="xlarge" borderRadius="medium" border="thick" borderStyle="dashed">
+				<Box padding={8} borderRadius="medium" border="thick" borderStyle="dashed">
 					4. Hidden above tablet
 				</Box>
 			</Hidden>

@@ -28,7 +28,7 @@ Playground.args = {
 
 export const Variants = () => {
 	return (
-		<Stack gap="xlarge">
+		<Stack gap={10}>
 			<Text variant="h1">I&apos;m an HTML &quot;p&quot; element that looks like heading level 1</Text>
 			<Text variant="h2">I&apos;m an HTML &quot;p&quot; element that looks like heading level 2</Text>
 			<Text variant="h3">I&apos;m an HTML &quot;p&quot; element that looks like heading level 3</Text>
@@ -40,7 +40,7 @@ export const Variants = () => {
 
 export const ElementTypes = () => {
 	return (
-		<Stack gap="xlarge">
+		<Stack gap={10}>
 			<Text>By default I&apos;m rendered as HTML &quot;p&quot; element</Text>
 			<Text as="strong">I am rendered as HTML &quot;strong&quot; element</Text>
 			<Text as="span">I am rendered as HTML &quot;span&quot; element</Text>

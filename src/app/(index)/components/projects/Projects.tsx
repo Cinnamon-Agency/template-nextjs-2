@@ -10,5 +10,5 @@ export const Projects = async () => {
 		.filter(project => project.featured)
 		.map(project => <ProjectCard key={project.slug} project={project} />)
 
-	return <Stack gap="xxlarge">{mappedProjectCards}</Stack>
+	return <Stack gap={16}>{mappedProjectCards}</Stack>
 }

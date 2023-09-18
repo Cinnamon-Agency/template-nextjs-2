@@ -8,19 +8,19 @@ import { Text } from '@/components/typography/text'
 
 export const Services = () => {
 	return (
-		<Box paddingY="xxlarge" backgroundColor="neutral.600">
+		<Box paddingY={16} backgroundColor="neutral.600">
 			<Container>
-				<Columns gap="medium">
+				<Columns gap={4}>
 					<Columns.Item columns={{ mobile: 12, desktop: 5 }}>
 						<Heading variant="h2" color="shades.00">
 							Our services
 						</Heading>
 					</Columns.Item>
 					<Columns.Item columns={{ mobile: 12, desktop: 7 }}>
-						<Stack gap="large">
-							<Columns gap="medium">
+						<Stack gap={10}>
+							<Columns gap={4}>
 								<Columns.Item columns={{ mobile: 12, tablet: 6 }}>
-									<Stack gap="small">
+									<Stack gap={3}>
 										<Text color="shades.00" fontWeight="bold" fontSize="xxbig">
 											Product design
 										</Text>
@@ -31,7 +31,7 @@ export const Services = () => {
 									</Stack>
 								</Columns.Item>
 								<Columns.Item columns={{ mobile: 12, tablet: 6 }}>
-									<Stack gap="small">
+									<Stack gap={3}>
 										<Text color="shades.00" fontWeight="bold" fontSize="xxbig">
 											Development
 										</Text>
@@ -42,7 +42,7 @@ export const Services = () => {
 									</Stack>
 								</Columns.Item>
 								<Columns.Item columns={{ mobile: 12, tablet: 6 }}>
-									<Stack gap="small">
+									<Stack gap={3}>
 										<Text color="shades.00" fontWeight="bold" fontSize="xxbig">
 											Quality assurance
 										</Text>
@@ -53,7 +53,7 @@ export const Services = () => {
 									</Stack>
 								</Columns.Item>
 								<Columns.Item columns={{ mobile: 12, tablet: 6 }}>
-									<Stack gap="small">
+									<Stack gap={3}>
 										<Text color="shades.00" fontWeight="bold" fontSize="xxbig">
 											Marketing & growth
 										</Text>

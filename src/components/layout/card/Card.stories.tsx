@@ -31,7 +31,7 @@ export const Basic = () => {
 			{/*	<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} /> */}
 			{/* </FormControl> */}
 			<Checkbox label="Same every year" />
-			<Box display="flex" gap="small" alignItems="flex-start">
+			<Box display="flex" gap={3} alignItems="flex-start">
 				<Button variant="ghost">Cancel</Button>
 				<Button disabled variant="primary">
 					Save
@@ -57,7 +57,7 @@ export const WithTitle = () => {
 			{/*	<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} /> */}
 			{/* </FormControl> */}
 			<Checkbox label="Same every year" />
-			<Box display="flex" gap="small" alignItems="flex-start">
+			<Box display="flex" gap={3} alignItems="flex-start">
 				<Button variant="ghost">Cancel</Button>
 				<Button disabled variant="primary">
 					Save
@@ -85,7 +85,7 @@ export const WithTitleAndDivider = () => {
 				{/*	<Select options={[{ value: 'Cinnamon', label: 'Cinnamon' }]} /> */}
 				{/* </FormControl> */}
 				<Checkbox label="Same every year" />
-				<Box display="flex" gap="small" alignItems="flex-start">
+				<Box display="flex" gap={3} alignItems="flex-start">
 					<Button variant="ghost">Cancel</Button>
 					<Button disabled variant="primary">
 						Save
@@ -100,7 +100,7 @@ export const WithDrawer = () => {
 	return (
 		<Card title="Employment Details">
 			<Card.Drawer>
-				<Stack gap="medium">
+				<Stack gap={4}>
 					<Card title="Employment Period">
 						<Card.Divider />
 						<Card.Body>
@@ -167,7 +167,7 @@ export const Nested = () => {
 					Add team
 				</Button>
 			</div>
-			<Box display="flex" alignItems="flex-start" gap="small">
+			<Box display="flex" alignItems="flex-start" gap={3}>
 				<Button variant="ghost">Cancel</Button>
 				<Button variant="primary">Save</Button>
 			</Box>

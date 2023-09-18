@@ -11,16 +11,15 @@ import { Canvas, Meta } from '@storybook/addon-docs'
 
 The spacing between children can be adjusted using the `gap` prop.
 
-Responsive values are supported, e.g. `gap={{ mobile: 'small', tablet: 'medium', desktop: 'large' }}`
+Responsive values are supported, e.g. `gap={{ mobile: '4', tablet: '5', desktop: '6' }}`
 
 ```jsx
 <Stack
 	gap={{
-		mobile: 'small',
-		tablet: 'medium',
-		desktop: 'large'
-	}}
->
+		mobile: '4',
+		tablet: '5',
+		desktop: '6'
+	}}>
 	<div />
 	<div />
 	<div />
@@ -33,7 +32,7 @@ Items can be aligned horizontally using the `alignItems` prop.
 Responsive values are supported, e.g. `alignItems={{ mobile: 'center', tablet: 'left' }}`
 
 ```jsx
-<Stack gap="md" alignItems={{ mobile: 'center', tablet: 'left' }}>
+<Stack gap="4" alignItems={{ mobile: 'center', tablet: 'left' }}>
 	<div />
 	<div />
 	<div />
@@ -45,11 +44,11 @@ Responsive values are supported, e.g. `alignItems={{ mobile: 'center', tablet: '
 You can also nest stacks to achive desired layouts.
 
 ```jsx
-<Stack gap="xlarge">
+<Stack gap="8">
 	<div />
 	<div />
 	<div />
-	<Stack gap="small">
+	<Stack gap="3">
 		<div />
 		<div />
 		<div />

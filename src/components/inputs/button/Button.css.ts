@@ -10,7 +10,7 @@ export const button = recipe({
 		cursor: 'pointer',
 		border: 'none',
 		borderRadius: tokens.borders.radius.small,
-		gap: tokens.spacing.xsmall,
+		gap: tokens.spacing[1],
 
 		':disabled': {
 			cursor: 'default',
@@ -49,14 +49,14 @@ export const button = recipe({
 		size: {
 			small: {
 				height: '2.125rem',
-				paddingLeft: tokens.spacing.xbig,
-				paddingRight: tokens.spacing.xbig,
+				paddingLeft: tokens.spacing[6],
+				paddingRight: tokens.spacing[6],
 				fontSize: tokens.typography.size.small
 			},
 			large: {
 				height: '3rem',
-				paddingLeft: tokens.spacing.xxbig,
-				paddingRight: tokens.spacing.xxbig,
+				paddingLeft: tokens.spacing[8],
+				paddingRight: tokens.spacing[8],
 				fontSize: tokens.typography.size.medium
 			}
 		}

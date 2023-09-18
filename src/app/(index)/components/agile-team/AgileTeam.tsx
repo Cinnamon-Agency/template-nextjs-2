@@ -8,9 +8,9 @@ import { Text } from '@/components/typography/text'
 
 export const AgileTeam = () => {
 	return (
-		<Box paddingY="xxlarge" backgroundColor="neutral.100">
+		<Box paddingY={16} backgroundColor="neutral.100">
 			<Container>
-				<Columns gap="medium">
+				<Columns gap={4}>
 					<Columns.Item columns={{ mobile: 12, tablet: 6 }}>
 						<Heading variant="h1">
 							Agile team <br />
@@ -18,7 +18,7 @@ export const AgileTeam = () => {
 						</Heading>
 					</Columns.Item>
 					<Columns.Item columns={{ mobile: 12, tablet: 6 }}>
-						<Stack gap="big" alignItems="flex-start">
+						<Stack gap={8} alignItems="flex-start">
 							<Text>
 								Extend your team with our high performing specialists or hire us to shape your product from scratch.
 								Either way, we’ll get your product off the ground and build a momentum for your success.

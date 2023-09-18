@@ -15,13 +15,13 @@ export const InputWrapper = ({ startIcon, endIcon, children }: Props) => {
 	return (
 		<div className={inputWrapper}>
 			{startIcon && (
-				<div className={iconSlot} style={{ left: tokens.spacing.small }}>
+				<div className={iconSlot} style={{ left: tokens.spacing[3] }}>
 					{startIcon}
 				</div>
 			)}
 			{children}
 			{endIcon && (
-				<div className={iconSlot} style={{ right: tokens.spacing.small }}>
+				<div className={iconSlot} style={{ right: tokens.spacing[3] }}>
 					{endIcon}
 				</div>
 			)}

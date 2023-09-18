@@ -39,7 +39,7 @@ export const Default = () => {
 	return (
 		<FormProvider {...form}>
 			<form onSubmit={form.handleSubmit(onSubmit)}>
-				<Stack gap="medium">
+				<Stack gap={4}>
 					<FormControl name="name">
 						<FormControl.Label>Name</FormControl.Label>
 						<TextInput placeholder="Enter your first name." />

@@ -4,7 +4,7 @@ import { tokens } from './theme.css'
 import { breakpoints } from './tokens/breakpoints'
 
 // Following properties can be used on different device sizes.
-// Gives us ability to do stuff like this -> padding={{ mobile: "small", tablet: "large" }}.
+// Gives us ability to do stuff like this -> padding={{ mobile: "4", tablet: "6" }}.
 // Do not add properties that you don't need based on different breakpoints as it will increase the size of generated CSS file.
 const responsiveProperties = defineProperties({
 	conditions: {

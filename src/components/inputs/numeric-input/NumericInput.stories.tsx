@@ -10,7 +10,7 @@ export default {
 
 export const Default = () => {
 	return (
-		<Stack gap="medium">
+		<Stack gap={4}>
 			<NumericInput value="" />
 			{/* <FormControl> */}
 			{/*	<FormControl.Label>With label and error message</FormControl.Label> */}

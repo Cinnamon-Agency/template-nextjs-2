@@ -26,15 +26,15 @@ export const Card = ({ children, title }: Props) => {
 		<Box
 			backgroundColor="shades.00"
 			borderRadius="small"
-			padding="xbig"
+			padding={6}
 			border="thin"
 			borderStyle="solid"
 			borderColor="neutral.200">
-			<Stack gap="xbig">
+			<Stack gap={6}>
 				{(title || drawer) && (
 					<Box display="flex" justifyContent="space-between" alignItems="center">
 						{title && <Text fontWeight="semibold">{title}</Text>}
-						<Box display="flex" alignItems="center" gap="small">
+						<Box display="flex" alignItems="center" gap={3}>
 							{extras}
 							{drawer && (
 								<IconButton onClick={() => setOpenedDrawer(prevState => !prevState)} size="small" variant="ghost">
@@ -53,10 +53,10 @@ export const Card = ({ children, title }: Props) => {
 }
 
 Card.Extra = ({ children }: { children: ReactNode }) => (
-	<Box display="flex" gap="small">
+	<Box display="flex" gap={3}>
 		{children}
 	</Box>
 )
 Card.Divider = () => <Divider />
-Card.Drawer = ({ children }: { children: ReactNode }) => <Stack gap="xbig">{children}</Stack>
-Card.Body = ({ children }: { children: ReactNode }) => <Stack gap="xbig">{children}</Stack>
+Card.Drawer = ({ children }: { children: ReactNode }) => <Stack gap={6}>{children}</Stack>
+Card.Body = ({ children }: { children: ReactNode }) => <Stack gap={6}>{children}</Stack>

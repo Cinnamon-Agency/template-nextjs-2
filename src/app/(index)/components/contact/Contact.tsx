@@ -6,14 +6,9 @@ import { Text } from '@/components/typography/text'
 
 export const Contact = () => {
 	return (
-		<Box
-			paddingY="xxlarge"
-			alignItems="center"
-			justifyContent="center"
-			backgroundColor="neutral.100"
-			textAlign="center">
+		<Box paddingY={16} alignItems="center" justifyContent="center" backgroundColor="neutral.100" textAlign="center">
 			<Container>
-				<Stack gap="large">
+				<Stack gap={10}>
 					<Text variant="h1">Have a project in mind? Let&apos;s work together.</Text>
 					<div>
 						<Button href="#">Contact Us</Button>

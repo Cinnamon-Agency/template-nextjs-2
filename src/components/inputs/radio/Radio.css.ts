@@ -6,7 +6,7 @@ export const radioWrapper = style({
 	display: 'inline-flex',
 	alignItems: 'center',
 	cursor: 'pointer',
-	gap: tokens.spacing.medium
+	gap: tokens.spacing[4]
 })
 
 export const hiddenRadio = style({

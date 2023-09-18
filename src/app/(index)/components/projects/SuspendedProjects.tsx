@@ -8,8 +8,8 @@ import { LoadingBoundary } from '@/components/utils/loading-boundary'
 export const SuspendedProjects = () => {
 	return (
 		<Container>
-			<Box paddingY="large">
-				<Stack gap="large">
+			<Box paddingY={8}>
+				<Stack gap={10}>
 					<LoadingBoundary loader={<div />}>
 						<Projects />
 					</LoadingBoundary>

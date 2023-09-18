@@ -40,6 +40,6 @@ export const content = style({
 	width: '90vw',
 	maxWidth: '600px',
 	maxHeight: '85vh',
-	padding: tokens.spacing.xbig,
+	padding: tokens.spacing[6],
 	animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`
 })

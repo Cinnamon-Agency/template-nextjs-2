@@ -41,7 +41,7 @@ export const FormControl = ({ name, children }: Props) => {
 
 				return (
 					<div>
-						<Stack gap="xsmall">
+						<Stack gap={2}>
 							{overridePropsDeep(label, props => ({ props, htmlFor: name }))}
 							{overriddenInput}
 						</Stack>

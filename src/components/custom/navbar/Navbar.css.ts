@@ -3,8 +3,8 @@ import { style } from '@vanilla-extract/css'
 import { tokens } from '@/style/theme.css'
 
 export const navbar = style({
-	paddingTop: tokens.spacing.medium,
-	paddingBottom: tokens.spacing.medium,
+	paddingTop: tokens.spacing[4],
+	paddingBottom: tokens.spacing[4],
 	backgroundImage: 'url(/pattern.png)',
 	backgroundColor: '#1C1C1C'
 })

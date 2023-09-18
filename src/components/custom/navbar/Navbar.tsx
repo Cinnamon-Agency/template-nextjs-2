@@ -12,9 +12,9 @@ export const Navbar = () => {
 	return (
 		<div className={styles.navbar}>
 			<Container>
-				<Box display="flex" justifyContent="space-between" alignItems="center" gap="big">
+				<Box display="flex" justifyContent="space-between" alignItems="center" gap={5}>
 					<Image src="/cinnamon-logo.svg" alt="Home" width={160} height={20} />
-					<Box display="flex" alignItems="center" gap="big">
+					<Box display="flex" alignItems="center" gap={5}>
 						<Link href="#" className={styles.link}>
 							Projects
 						</Link>

@@ -32,7 +32,7 @@ export const tableRow = style({
 })
 
 export const tableHead = style({
-	padding: tokens.spacing.medium,
+	padding: tokens.spacing[4],
 	fontSize: tokens.typography.size.medium,
 	fontWeight: tokens.typography.weight.bold,
 	textAlign: 'left',
@@ -40,11 +40,11 @@ export const tableHead = style({
 })
 
 export const tableCell = style({
-	padding: tokens.spacing.medium,
+	padding: tokens.spacing[4],
 	color: tokens.colors['neutral.500']
 })
 
 export const tableCaption = style({
-	marginTop: tokens.spacing.medium,
+	marginTop: tokens.spacing[4],
 	fontSize: tokens.typography.size.small
 })

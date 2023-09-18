@@ -24,7 +24,7 @@ export const Default = () => {
 	}
 
 	return (
-		<Stack gap="small">
+		<Stack gap={3}>
 			<Checkbox name="checkbox" value="A" label="Checkbox A" onChange={handleOnChange} checked={values.includes('A')} />
 			<Checkbox name="checkbox" value="B" label="Checkbox B" onChange={handleOnChange} checked={values.includes('B')} />
 			<Checkbox name="checkbox" value="C" label="Checkbox C" onChange={handleOnChange} checked={values.includes('C')} />
