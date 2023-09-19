@@ -1,0 +1,7 @@
+/* eslint-disable no-restricted-exports */
+export { default } from 'next-auth/middleware'
+
+export const config = {
+	// matcher: ["/profile"],
+	matcher: ['/((?!register|api|login).*)']
+}

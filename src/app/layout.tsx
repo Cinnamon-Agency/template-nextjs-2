@@ -7,6 +7,8 @@ import '@/style/app.css'
 import { Footer } from '@/components/custom/footer'
 import { Navbar } from '@/components/custom/navbar'
 
+import { NextAuthProvider } from './providers'
+
 const inter = Inter({
 	weight: ['400', '600', '700'],
 	subsets: ['latin'],
@@ -24,7 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html lang="en">
 			<body className={inter.className}>
 				<Navbar />
-				{children}
+				<NextAuthProvider>{children}</NextAuthProvider>
 				<Footer />
 			</body>
 		</html>
