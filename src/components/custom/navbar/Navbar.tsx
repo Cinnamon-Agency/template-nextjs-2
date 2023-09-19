@@ -1,39 +1,38 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image'
-import Link from 'next/link'
+import { getServerSession } from 'next-auth'
 
-import { Button } from '@/components/inputs/button'
+import { BlockIcon } from '@/components/icons/block-icon'
+import { IconButton } from '@/components/inputs/icon-button'
 import { Box } from '@/components/layout/box'
-import { Container } from '@/components/layout/container'
+import { Text } from '@/components/typography/text'
+import { authOptions } from '@/lib/auth'
 
-import * as styles from './Navbar.css'
+import ChevronDownIcon from './assets/chevron-down-icon.svg'
+import { Title } from './Title'
+import { Tag } from '../tag'
 
-export const Navbar = () => {
+export const Navbar = async () => {
+	const session = await getServerSession(authOptions)
+
+	if (!session) return null
+
 	return (
-		<div className={styles.navbar}>
-			<Container>
-				<Box display="flex" justifyContent="space-between" alignItems="center" gap={5}>
-					<Image src="/cinnamon-logo.svg" alt="Home" width={160} height={20} />
-					<Box display="flex" alignItems="center" gap={5}>
-						<Link href="#" className={styles.link}>
-							Projects
-						</Link>
-						<Link href="#" className={styles.link}>
-							Services
-						</Link>
-						<Link href="#" className={styles.link}>
-							About Us
-						</Link>
-						<Link href="#" className={styles.link}>
-							Careers
-						</Link>
-						<Link href="#" className={styles.link}>
-							Blog
-						</Link>
-						<Button href="#">Contact Us</Button>
-					</Box>
-				</Box>
-			</Container>
-		</div>
+		<Box display="flex" justify="space-between" paddingX={6} paddingTop={8} paddingBottom={4}>
+			<Title />
+			<Box display="flex" align="center" gap={2}>
+				<Image
+					src={session.user.image}
+					width={24}
+					height={24}
+					alt={session.user.name}
+					style={{ borderRadius: '100%' }}
+				/>
+				<Text fontSize="small">{session.user.name}</Text>
+				<Tag text="TL" />
+				<IconButton variant="ghost" size="small">
+					<BlockIcon icon={ChevronDownIcon} />
+				</IconButton>
+			</Box>
+		</Box>
 	)
 }

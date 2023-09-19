@@ -12,7 +12,7 @@ const nextConfig = {
 		appDir: true
 	},
 	images: {
-		domains: ['images.ctfassets.net']
+		domains: ['lh3.googleusercontent.com']
 	},
 	webpack(config) {
 		config.module.rules.push({
