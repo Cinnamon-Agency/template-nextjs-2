@@ -1,13 +1,11 @@
 import Image from 'next/image'
 import { getServerSession } from 'next-auth'
 
-import { BlockIcon } from '@/components/icons/block-icon'
-import { IconButton } from '@/components/inputs/icon-button'
 import { Box } from '@/components/layout/box'
 import { Text } from '@/components/typography/text'
 import { authOptions } from '@/lib/auth'
 
-import ChevronDownIcon from './assets/chevron-down-icon.svg'
+import { Actions } from './Actions'
 import { Title } from './Title'
 import { Tag } from '../tag'
 
@@ -29,9 +27,7 @@ export const Navbar = async () => {
 				/>
 				<Text fontSize="small">{session.user.name}</Text>
 				<Tag text="TL" />
-				<IconButton variant="ghost" size="small">
-					<BlockIcon icon={ChevronDownIcon} />
-				</IconButton>
+				<Actions />
 			</Box>
 		</Box>
 	)

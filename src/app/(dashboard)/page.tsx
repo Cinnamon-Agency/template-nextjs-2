@@ -1,7 +1,5 @@
-import { User } from '@/components/custom/user'
-
 const Dashboard = () => {
-	return <User />
+	return null
 }
 
 export default Dashboard
