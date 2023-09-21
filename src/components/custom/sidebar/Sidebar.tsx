@@ -29,7 +29,7 @@ export const Sidebar = () => {
 			paddingY={8}
 			paddingX={4}
 			backgroundColor="primary.500"
-			style={{ height: '100vh' }}
+			style={{ minHeight: '100vh' }}
 			gap={12}>
 			<IconButton onClick={() => router.push('/')} size="medium">
 				<BlockIcon icon={CinnamonLogo} />

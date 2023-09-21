@@ -10,7 +10,9 @@ export const button = recipe({
 		cursor: 'pointer',
 		border: 'none',
 		borderRadius: tokens.borders.radius.small,
-		gap: tokens.spacing[1],
+		gap: tokens.spacing[2],
+		fontWeight: tokens.typography.weight.semibold,
+		flexShrink: 0,
 
 		':disabled': {
 			cursor: 'default',

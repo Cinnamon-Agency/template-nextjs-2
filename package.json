@@ -8,6 +8,7 @@
 		"@radix-ui/react-dialog": "1.0.4",
 		"@radix-ui/react-dropdown-menu": "^2.0.5",
 		"@radix-ui/react-popover": "1.0.6",
+		"@tanstack/react-table": "^8.10.0",
 		"@vanilla-extract/css": "1.11.0",
 		"@vanilla-extract/dynamic": "2.0.3",
 		"@vanilla-extract/recipes": "0.4.0",
@@ -17,14 +18,17 @@
 		"dotenv": "16.0.1",
 		"next": "13.5.1",
 		"next-auth": "4.23.1",
+		"query-string": "^8.1.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-error-boundary": "^4.0.10",
 		"react-hook-form": "7.45.4",
 		"react-nanny": "2.15.0",
 		"react-number-format": "5.2.2",
+		"rooks": "^7.14.1",
 		"sharp": "^0.32.1",
-		"zod": "3.22.1"
+		"zod": "3.22.1",
+		"zustand": "^4.4.1"
 	},
 	"devDependencies": {
 		"@hookform/devtools": "^4.3.1",
