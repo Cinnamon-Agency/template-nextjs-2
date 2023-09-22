@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable react/button-has-type */
 import clsx from 'clsx'
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, MouseEventHandler, ReactNode } from 'react'
 
 import { ButtonVariants, button } from './Button.css'
 
@@ -13,7 +13,7 @@ type AnchorProps = { onClick?: never; href: string } & Pick<
 	'target' | 'rel' | 'className'
 >
 // When onClick prop is passed also allow other button attributes
-type ButtonProps = { onClick?: () => void; href?: never } & Pick<
+type ButtonProps = { onClick?: MouseEventHandler<HTMLButtonElement>; href?: never } & Pick<
 	ButtonHTMLAttributes<HTMLButtonElement>,
 	'type' | 'className' | 'disabled'
 >
