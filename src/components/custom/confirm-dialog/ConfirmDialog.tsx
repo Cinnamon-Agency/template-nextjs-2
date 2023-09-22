@@ -1,4 +1,6 @@
-import { Button } from '@/components/inputs/button'
+import { ReactNode } from 'react'
+import { getChildByType } from 'react-nanny'
+
 import { Box } from '@/components/layout/box'
 import { Stack } from '@/components/layout/stack'
 import { Dialog } from '@/components/overlay/dialog'
@@ -7,17 +9,19 @@ import { useMounted } from '@/hooks/use-mounted'
 
 interface Props {
 	opened: boolean
-	loading?: boolean
 	title: string
 	description: string
+	children: ReactNode
 	onClose: () => void
-	onConfirm: () => void
 }
 
-export const ConfirmDialog = ({ opened, loading, title, description, onClose, onConfirm }: Props) => {
+export const ConfirmDialog = ({ opened, title, description, children, onClose }: Props) => {
 	const mounted = useMounted()
 
 	if (!mounted) return null
+
+	const actions = getChildByType(children, [ConfirmDialog.Actions])
+	const body = getChildByType(children, [ConfirmDialog.Body])
 
 	return (
 		<Dialog opened={opened} onClose={onClose}>
@@ -26,15 +30,18 @@ export const ConfirmDialog = ({ opened, loading, title, description, onClose, on
 					<Text variant="h4">{title}</Text>
 					<Text color="neutral.500">{description}</Text>
 				</Stack>
-				<Box display="flex" justifyContent="flex-end" gap={4}>
-					<Button variant="secondary" onClick={onClose} disabled={loading}>
-						Cancel
-					</Button>
-					<Button onClick={onConfirm} disabled={loading}>
-						Delete
-					</Button>
-				</Box>
+				{body}
+				{actions}
 			</Stack>
 		</Dialog>
 	)
 }
+
+ConfirmDialog.Actions = ({ children }: { children: ReactNode }) => (
+	<Box display="flex" justify="flex-end" gap={4}>
+		{children}
+	</Box>
+)
+
+// eslint-disable-next-line react/jsx-no-useless-fragment
+ConfirmDialog.Body = ({ children }: { children: ReactNode }) => <>{children}</>

@@ -101,9 +101,15 @@ const AddEmployee = () => {
 				opened={confirmDialog.opened}
 				title="Save employee?"
 				description="The Employee that you filled will be added to the list of people in the table. Do you want to proceed this action?"
-				onClose={confirmDialog.toggleOpened}
-				onConfirm={() => onSubmit(form.getValues())}
-			/>
+				onClose={confirmDialog.toggleOpened}>
+				<ConfirmDialog.Actions>
+					<Button variant="secondary" onClick={confirmDialog.toggleOpened}>
+						No, cancel
+					</Button>
+					<Button onClick={() => onSubmit(form.getValues())}>Yes, save employee</Button>
+				</ConfirmDialog.Actions>
+			</ConfirmDialog>
+
 			{/* <DevTool control={form.control} /> */}
 		</FormProvider>
 	)

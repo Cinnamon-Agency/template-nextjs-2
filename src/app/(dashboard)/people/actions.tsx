@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 
 import { ConfirmDialog } from '@/components/custom/confirm-dialog'
 import { BlockIcon } from '@/components/icons/block-icon'
+import { Button } from '@/components/inputs/button'
 import { IconButton } from '@/components/inputs/icon-button'
 import { Box } from '@/components/layout/box'
 import { useOpened } from '@/hooks/use-toggle'
@@ -38,9 +39,14 @@ export const Actions = ({ data }: Props) => {
 				opened={confirmDialog.opened}
 				title="Delete employee?"
 				description="If you delete this person, all data will be deleted and cannot be recovered."
-				onClose={confirmDialog.toggleOpened}
-				onConfirm={onDelete}
-			/>
+				onClose={confirmDialog.toggleOpened}>
+				<ConfirmDialog.Actions>
+					<Button variant="secondary" onClick={confirmDialog.toggleOpened}>
+						Cancel
+					</Button>
+					<Button onClick={onDelete}>Delete</Button>
+				</ConfirmDialog.Actions>
+			</ConfirmDialog>
 		</>
 	)
 }
