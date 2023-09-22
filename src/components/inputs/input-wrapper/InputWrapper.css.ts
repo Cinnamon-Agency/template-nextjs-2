@@ -9,6 +9,7 @@ const disabled = { borderColor: tokens.colors['neutral.300'], color: tokens.colo
 const hasError = { borderColor: tokens.colors['destructive.500'], color: tokens.colors['destructive.500'] }
 
 export const inputWrapper = style({
+	width: '100%',
 	position: 'relative',
 	color: tokens.colors['neutral.500']
 })

@@ -70,7 +70,7 @@ export const Inputs = () => {
 					/>
 				</div>
 			</Box>
-			<Button>
+			<Button onClick={() => router.push('/people/add')}>
 				<PlusIcon />
 				Add employee
 			</Button>

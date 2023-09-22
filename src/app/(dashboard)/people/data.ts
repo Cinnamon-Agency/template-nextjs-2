@@ -37,6 +37,12 @@ export const employmentTypes = [
 	{ label: 'Student', value: 'student' }
 ]
 
+export const genders = [
+	{ label: 'Choose Gender', value: '' },
+	{ label: 'Male', value: 'm' },
+	{ label: 'Female', value: 'f' }
+]
+
 export const dummyPeople = [
 	{
 		id: 'ples-karlo',

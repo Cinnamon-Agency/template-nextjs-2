@@ -15,7 +15,7 @@ export const Navbar = async () => {
 	if (!session) return null
 
 	return (
-		<Box display="flex" justify="space-between" paddingX={6} paddingTop={8} paddingBottom={4}>
+		<Box display="flex" align="center" justify="space-between" paddingX={6} style={{ height: '4.5rem' }}>
 			<Title />
 			<Box display="flex" align="center" gap={2}>
 				<Image
