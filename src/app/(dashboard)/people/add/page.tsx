@@ -2,16 +2,12 @@
 
 // import { DevTool } from '@hookform/devtools'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useEffect } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 
-import { ConfirmDialog } from '@/components/custom/confirm-dialog'
-import { Button } from '@/components/inputs/button'
-import { Box } from '@/components/layout/box'
 import { Stack } from '@/components/layout/stack'
-import { useTitleActionsStore } from '@/hooks/use-title-actions'
-import { useOpened } from '@/hooks/use-toggle'
+import { useOverridePageTitle } from '@/hooks/override-page-title'
 
+import { Actions } from './actions'
 import { Documents } from './documents'
 import { EmploymentDetails } from './employment-details'
 import { Intro } from './intro'
@@ -20,7 +16,7 @@ import { PersonalDetails } from './personal-details'
 import { FormValues, formSchema } from './schema'
 
 const AddEmployee = () => {
-	const { setOverriddenTitle, setEnableBack } = useTitleActionsStore()
+	useOverridePageTitle('Add Employee')
 
 	const form = useForm<FormValues>({
 		mode: 'onBlur',
@@ -45,26 +41,6 @@ const AddEmployee = () => {
 		}
 	})
 
-	const confirmDialog = useOpened()
-
-	useEffect(() => {
-		setOverriddenTitle('Add Employee')
-		setEnableBack(true)
-
-		return () => {
-			setOverriddenTitle(undefined)
-			setEnableBack(false)
-		}
-	}, [setOverriddenTitle, setEnableBack])
-
-	const onSubmit = (data: FormValues) => {
-		console.log(data)
-	}
-
-	const onReset = () => {
-		form.reset()
-	}
-
 	return (
 		<FormProvider {...form}>
 			<Stack gap={6}>
@@ -78,38 +54,7 @@ const AddEmployee = () => {
 					</Stack>
 				</div>
 			</Stack>
-			<Box paddingY={10} />
-			<Box
-				position="fixed"
-				boxShadow="medium"
-				padding={2}
-				display="flex"
-				gap={4}
-				paddingLeft={24}
-				style={{ bottom: 0, left: 0, width: '100%', background: 'white' }}>
-				<Button variant="ghost" type="button">
-					Cancel
-				</Button>
-				<Button variant="secondary" type="button" onClick={onReset}>
-					Reset
-				</Button>
-				<Button variant="primary" disabled={!form.formState.isValid} type="button" onClick={confirmDialog.toggleOpened}>
-					Save
-				</Button>
-			</Box>
-			<ConfirmDialog
-				opened={confirmDialog.opened}
-				title="Save employee?"
-				description="The Employee that you filled will be added to the list of people in the table. Do you want to proceed this action?"
-				onClose={confirmDialog.toggleOpened}>
-				<ConfirmDialog.Actions>
-					<Button variant="secondary" onClick={confirmDialog.toggleOpened}>
-						No, cancel
-					</Button>
-					<Button onClick={() => onSubmit(form.getValues())}>Yes, save employee</Button>
-				</ConfirmDialog.Actions>
-			</ConfirmDialog>
-
+			<Actions />
 			{/* <DevTool control={form.control} /> */}
 		</FormProvider>
 	)

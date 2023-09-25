@@ -104,7 +104,7 @@ export const PersonalDetails = () => {
 									<Columns gap={4}>
 										<Columns.Item columns={6}>
 											<FormControl name="dateOfBirth">
-												<PatternInput format="##/##/####" placeholder="DD/MM/YYYY" />
+												<PatternInput format="##/##/####" mask="_" placeholder="DD/MM/YYYY" />
 											</FormControl>
 										</Columns.Item>
 									</Columns>
