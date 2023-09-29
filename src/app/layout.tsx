@@ -13,7 +13,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-	title: 'Operativa Dashboard'
+	title: 'Operativa | Cinnamon'
 }
 
 // eslint-disable-next-line react/function-component-definition

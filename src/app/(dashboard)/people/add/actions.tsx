@@ -1,5 +1,6 @@
 import { useRouter } from 'next/navigation'
 import { useFormContext } from 'react-hook-form'
+import toast from 'react-hot-toast'
 
 import { ConfirmDialog } from '@/components/custom/confirm-dialog'
 import { Button } from '@/components/inputs/button'
@@ -15,6 +16,7 @@ export const Actions = () => {
 	const onSubmit = () => {
 		const data = formContext.getValues()
 		console.log(data)
+		toast.success(`New Employee "${data.firstName} ${data.lastName}" saved!`)
 	}
 
 	const onReset = () => {
