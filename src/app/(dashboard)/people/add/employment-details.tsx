@@ -5,6 +5,7 @@ import { Controller, useFieldArray, useFormContext } from 'react-hook-form'
 import { Counter } from '@/components/custom/counter'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/data-display/accordion'
 import { DeleteIcon } from '@/components/icons/delete-icon'
+import { InfoIcon } from '@/components/icons/info-icon'
 import { PlusIcon } from '@/components/icons/plus-icon'
 import { Button } from '@/components/inputs/button'
 import { Checkbox } from '@/components/inputs/checkbox'
@@ -16,6 +17,7 @@ import { Box } from '@/components/layout/box'
 import { Columns } from '@/components/layout/columns'
 import { Divider } from '@/components/layout/divider'
 import { Stack } from '@/components/layout/stack'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/overlay/tooltip'
 import { Text } from '@/components/typography/text'
 
 const defaultValues = {
@@ -35,7 +37,6 @@ const defaultValues = {
 export const EmploymentDetails = () => {
 	const { control, watch } = useFormContext()
 	const { fields, append, remove } = useFieldArray({ control, name: 'employmentDetails' })
-	console.log(fields)
 
 	return (
 		<Accordion type="single" collapsible>
@@ -237,19 +238,25 @@ export const EmploymentDetails = () => {
 													Vacation days
 												</Text>
 											</div>
-											<div style={{ flexGrow: 1 }}>
-												<Columns gap={4}>
-													<Columns.Item columns={6}>
-														<Controller
-															control={control}
-															name={`employmentDetails[${index}].vacationDays`}
-															render={({ field }) => (
-																<Counter value={field.value} onChange={newValue => field.onChange(newValue)} />
-															)}
-														/>
-													</Columns.Item>
-												</Columns>
-											</div>
+											<Box display="flex" gap={4} style={{ flexGrow: 1 }}>
+												<Controller
+													control={control}
+													name={`employmentDetails[${index}].vacationDays`}
+													render={({ field }) => (
+														<Counter value={field.value} onChange={newValue => field.onChange(newValue)} />
+													)}
+												/>
+												<TooltipProvider>
+													<Tooltip>
+														<TooltipTrigger>
+															<InfoIcon />
+														</TooltipTrigger>
+														<TooltipContent>
+															The number of annual holidays is increased annually as determined by the labor law.
+														</TooltipContent>
+													</Tooltip>
+												</TooltipProvider>
+											</Box>
 										</Box>
 										<Box display="flex" align="center" gap={6}>
 											<div style={{ width: '10rem', flexShrink: 0, display: 'flex', justifyContent: 'flex-end' }} />

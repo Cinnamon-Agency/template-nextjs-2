@@ -4,6 +4,7 @@ import { Controller, useFormContext } from 'react-hook-form'
 
 import { Counter } from '@/components/custom/counter'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/data-display/accordion'
+import { InfoIcon } from '@/components/icons/info-icon'
 import { FormControl } from '@/components/inputs/form-control'
 import { PatternInput } from '@/components/inputs/pattern-input'
 import { Select } from '@/components/inputs/select'
@@ -12,6 +13,7 @@ import { Box } from '@/components/layout/box'
 import { Columns } from '@/components/layout/columns'
 import { Divider } from '@/components/layout/divider'
 import { Stack } from '@/components/layout/stack'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/overlay/tooltip'
 import { Text } from '@/components/typography/text'
 
 import { genders, offices, professionalQualifications } from '../data'
@@ -124,6 +126,21 @@ export const PersonalDetails = () => {
 											<FormControl name="dateOfReligiousCelebration">
 												<PatternInput format="##/##/####" mask="_" placeholder="DD/MM/YYYY" />
 											</FormControl>
+										</Columns.Item>
+										<Columns.Item columns={6}>
+											<div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+												<TooltipProvider>
+													<Tooltip>
+														<TooltipTrigger>
+															<InfoIcon />
+														</TooltipTrigger>
+														<TooltipContent>
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis diam auctor, commodo
+															sapien quis, consequat neque. Donec et lorem nibh.
+														</TooltipContent>
+													</Tooltip>
+												</TooltipProvider>
+											</div>
 										</Columns.Item>
 									</Columns>
 								</div>
