@@ -37,7 +37,29 @@ const AddEmployee = () => {
 			phoneNumber: '',
 			emergencyPhoneNumber: '',
 			emergencyContactName: '',
-			children: 0
+			children: 0,
+
+			employmentDetails: [
+				{
+					firstEmployment: '',
+					startOfWork: '',
+					endOfWork: '',
+					employmentType: '',
+					workingHours: '',
+					employmentDuration: '',
+					probationPeriod: '',
+					probationPeriodDate: '',
+					vacationDays: 20,
+					additionalRules: ''
+				}
+			],
+
+			department: '',
+			headOfDepartment: '',
+			teamLead: '',
+			workplace: '',
+			seniorityLevel: '',
+			roleInOperativa: ''
 		}
 	})
 

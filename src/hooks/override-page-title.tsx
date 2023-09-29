@@ -13,5 +13,5 @@ export const useOverridePageTitle = (title: string, enableBack: boolean = true) 
 			setOverriddenTitle(undefined)
 			setEnableBack(false)
 		}
-	}, [setOverriddenTitle, setEnableBack])
+	}, [setOverriddenTitle, setEnableBack, title, enableBack])
 }

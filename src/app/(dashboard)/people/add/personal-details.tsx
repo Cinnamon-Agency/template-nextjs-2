@@ -1,3 +1,5 @@
+'use client'
+
 import { Controller, useFormContext } from 'react-hook-form'
 
 import { Counter } from '@/components/custom/counter'
@@ -12,7 +14,7 @@ import { Divider } from '@/components/layout/divider'
 import { Stack } from '@/components/layout/stack'
 import { Text } from '@/components/typography/text'
 
-import { genders, offices } from '../data'
+import { genders, offices, professionalQualifications } from '../data'
 
 export const PersonalDetails = () => {
 	const { control } = useFormContext()
@@ -199,7 +201,9 @@ export const PersonalDetails = () => {
 								<div style={{ flexGrow: 1 }}>
 									<Columns gap={4}>
 										<Columns.Item columns={6}>
-											<Select options={[{ label: 'Choose Type', value: '' }]} />
+											<FormControl name="professionalQualification">
+												<Select options={professionalQualifications} />
+											</FormControl>
 										</Columns.Item>
 									</Columns>
 								</div>

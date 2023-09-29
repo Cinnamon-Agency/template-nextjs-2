@@ -38,7 +38,39 @@ export const formSchema = z.object({
 		.regex(/^\+\d{1,4}\d{1,15}$/, { message: 'Invalid phone number format.' })
 		.or(z.literal('')),
 	emergencyContactName: z.string(),
-	children: z.coerce.number().min(0)
+	children: z.coerce.number().min(0),
+
+	// Employment Details
+	employmentDetails: z
+		.array(
+			z.object({
+				firstEmployment: z.string(),
+				startOfWork: z
+					.string()
+					.regex(/^\d{2}\/\d{2}\/\d{4}$/, { message: 'Invalid date format. Use DD/MM/YYYY format.' }),
+				endOfWork: z
+					.string()
+					.regex(/^\d{2}\/\d{2}\/\d{4}$/, { message: 'Invalid date format. Use DD/MM/YYYY format.' })
+					.or(z.literal('')),
+				employmentType: z.string(),
+				workingHours: z.string(),
+				partTimeHours: z.number().optional(),
+				employmentDuration: z.string(),
+				probationPeriod: z.string(),
+				probationPeriodDate: z.string(),
+				vacationDays: z.number(),
+				additionalRules: z.string()
+			})
+		)
+		.min(1),
+
+	// Job Details
+	department: z.string().min(1, { message: 'This field is required' }),
+	headOfDepartment: z.string(),
+	teamLead: z.string(),
+	workplace: z.string(),
+	seniorityLevel: z.string(),
+	roleInOperativa: z.string()
 })
 
 export type FormValues = z.infer<typeof formSchema>
