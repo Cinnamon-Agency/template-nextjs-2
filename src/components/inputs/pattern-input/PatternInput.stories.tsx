@@ -10,7 +10,7 @@ export default {
 
 export const Default = () => {
 	return (
-		<Stack gap="medium">
+		<Stack gap={4}>
 			{/* <FormControl> */}
 			{/*	<FormControl.Label>Date</FormControl.Label> */}
 			{/*	<PatternInput format="##/##/####" mask="_" allowEmptyFormatting /> */}

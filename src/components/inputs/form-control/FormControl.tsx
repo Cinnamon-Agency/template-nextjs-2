@@ -7,13 +7,9 @@ import { getChildByType, overridePropsDeep } from 'react-nanny'
 import { Stack } from 'components/layout/stack'
 import { Text } from 'components/typography/text'
 
-import { Checkbox } from '../checkbox'
-import { CheckboxGroup } from '../checkbox-group'
 import { Label } from '../label'
 import { NumericInput } from '../numeric-input'
 import { PatternInput } from '../pattern-input'
-import { Radio } from '../radio'
-import { RadioGroup } from '../radio-group'
 import { Select } from '../select'
 import { TextInput } from '../text-input'
 
@@ -26,16 +22,7 @@ export const FormControl = ({ name, children }: Props) => {
 	} = useFormContext()
 	const label = getChildByType(children, [FormControl.Label])
 	const message = getChildByType(children, [FormControl.Message])
-	const input = getChildByType(children, [
-		TextInput,
-		Select,
-		NumericInput,
-		PatternInput,
-		Radio,
-		RadioGroup,
-		Checkbox,
-		CheckboxGroup
-	])
+	const input = getChildByType(children, [TextInput, Select, NumericInput, PatternInput])
 
 	return (
 		<Controller
@@ -46,15 +33,16 @@ export const FormControl = ({ name, children }: Props) => {
 				const overriddenInput = overridePropsDeep(input, () => ({
 					hasError: errors[field.name] !== undefined,
 					value: field.value,
+					id: name,
 					name: field.name,
 					onChange: field.onChange,
 					onBlur: field.onBlur
 				}))
 
 				return (
-					<div style={{ width: '100%' }}>
-						<Stack gap="xsmall">
-							{label}
+					<div>
+						<Stack gap={2}>
+							{overridePropsDeep(label, props => ({ props, htmlFor: name }))}
 							{overriddenInput}
 						</Stack>
 						{overridePropsDeep(message, () => ({ children: errorMessage }))}

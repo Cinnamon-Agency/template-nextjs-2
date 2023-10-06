@@ -18,7 +18,7 @@ interface ColumnsComposition {
 	Item: FC<Item>
 }
 
-export const Columns: FC<Props> & ColumnsComposition = ({ children, gap = 'medium' }: Props) => {
+export const Columns: FC<Props> & ColumnsComposition = ({ children, gap = 4 }: Props) => {
 	return <div className={clsx(grid, atoms({ gap }))}>{children}</div>
 }
 

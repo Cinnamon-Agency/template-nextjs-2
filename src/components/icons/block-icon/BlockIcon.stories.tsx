@@ -12,7 +12,7 @@ export const CalendarIcon = () => <BlockIcon icon={CalendarIconAsset} size="medi
 
 export const Sizes = () => {
 	return (
-		<Inline gap="medium">
+		<Inline gap={4}>
 			<BlockIcon icon={CalendarIconAsset} size="small" />
 			<BlockIcon icon={CalendarIconAsset} size="medium" />
 			<BlockIcon icon={CalendarIconAsset} size="large" />
@@ -22,7 +22,7 @@ export const Sizes = () => {
 
 export const Colors = () => {
 	return (
-		<Inline gap="medium">
+		<Inline gap={4}>
 			<div style={{ color: 'red' }}>
 				<BlockIcon icon={CalendarIconAsset} />
 			</div>

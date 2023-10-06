@@ -31,8 +31,8 @@ Playground.args = {
 
 export const Variants = () => {
 	return (
-		<Box display="flex" gap="xxlarge">
-			<Stack gap="medium" alignItems="flex-start">
+		<Box display="flex" gap={16}>
+			<Stack gap={4} alignItems="flex-start">
 				<Button variant="primary">
 					<InlineIcon icon={CheckmarkInlineIcon} />
 					Primary
@@ -54,7 +54,7 @@ export const Variants = () => {
 					Success
 				</Button>
 			</Stack>
-			<Stack gap="medium" alignItems="flex-start">
+			<Stack gap={4} alignItems="flex-start">
 				<Button variant="primary" size="small">
 					<InlineIcon icon={CheckmarkInlineIcon} />
 					Primary

@@ -27,7 +27,7 @@ export const Dialog = ({ title, description, opened, children, onClose }: Props)
 			<DialogPrimitive.Portal>
 				<DialogPrimitive.Overlay className={styles.overlay} />
 				<DialogPrimitive.DialogContent className={styles.content}>
-					<Stack gap="medium">
+					<Stack gap={4}>
 						<Text variant="h4">{title}</Text>
 						<Text>{description}</Text>
 						{children}

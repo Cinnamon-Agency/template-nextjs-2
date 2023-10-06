@@ -17,7 +17,7 @@ Then, install the dependencies:
 yarn install
 ```
 
-## Usage 
+## Usage
 
 To start the development server, run:
 

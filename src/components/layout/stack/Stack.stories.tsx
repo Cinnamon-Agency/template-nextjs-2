@@ -21,17 +21,17 @@ export const Playground: StoryFn<ComponentProps<typeof Stack>> = args => {
 }
 
 Playground.args = {
-	gap: 'medium',
+	gap: 4,
 	alignItems: 'flex-start',
 	justifyContent: 'center'
 }
 
 export const Nested = () => (
-	<Stack gap="xxlarge">
+	<Stack gap={16}>
 		<Placeholder width="320px" height="100px" />
 		<Placeholder width="320px" height="100px" />
 		<Placeholder width="320px" height="100px" />
-		<Stack gap="small">
+		<Stack gap={3}>
 			<Placeholder width="320px" height="100px" />
 			<Placeholder width="320px" height="100px" />
 		</Stack>

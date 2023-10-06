@@ -4,7 +4,7 @@ import { tokens } from './theme.css'
 import { breakpoints } from './tokens/breakpoints'
 
 // Following properties can be used on different device sizes.
-// Gives us ability to do stuff like this -> padding={{ mobile: "small", tablet: "large" }}.
+// Gives us ability to do stuff like this -> padding={{ mobile: "4", tablet: "6" }}.
 // Do not add properties that you don't need based on different breakpoints as it will increase the size of generated CSS file.
 const responsiveProperties = defineProperties({
 	conditions: {
@@ -32,7 +32,10 @@ const responsiveProperties = defineProperties({
 	shorthands: {
 		padding: ['paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight'],
 		paddingX: ['paddingLeft', 'paddingRight'],
-		paddingY: ['paddingTop', 'paddingBottom']
+		paddingY: ['paddingTop', 'paddingBottom'],
+		direction: ['flexDirection'],
+		justify: ['justifyContent'],
+		align: ['alignItems']
 	}
 })
 
@@ -41,13 +44,13 @@ const staticProperties = defineProperties({
 	properties: {
 		overflow: ['visible', 'hidden', 'scroll', 'auto'],
 		position: ['static', 'relative', 'absolute', 'fixed', 'sticky'],
-		borderStyle: ['none', 'solid', 'dashed'],
 		color: tokens.colors,
 		backgroundColor: tokens.colors,
 		boxShadow: tokens.shadows,
+		border: tokens.borders.border,
 		borderRadius: tokens.borders.radius,
-		borderWidth: tokens.borders.width,
 		borderColor: tokens.borders.color,
+		borderStyle: ['none', 'solid', 'dashed'],
 		zIndex: tokens.indices,
 		// Typography tokens
 		textTransform: ['none', 'capitalize', 'uppercase', 'lowercase'],

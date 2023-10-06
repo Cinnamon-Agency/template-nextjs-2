@@ -28,7 +28,7 @@ export const Playground: StoryFn<ComponentProps<typeof Inline>> = args => {
 }
 
 Playground.args = {
-	gap: 'medium',
+	gap: 4,
 	alignItems: 'flex-start',
 	justifyContent: 'center'
 }

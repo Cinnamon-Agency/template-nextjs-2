@@ -21,7 +21,7 @@ Playground.args = {
 
 export const Variants = () => {
 	return (
-		<Stack gap="xlarge">
+		<Stack gap={10}>
 			<Heading variant="h1">Heading level 1</Heading>
 			<Heading variant="h2">Heading level 2</Heading>
 			<Heading variant="h3">Heading level 3</Heading>

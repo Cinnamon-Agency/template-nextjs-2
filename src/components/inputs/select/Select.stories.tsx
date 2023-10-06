@@ -24,7 +24,7 @@ export const Default = () => {
 	}
 
 	return (
-		<Stack gap="medium">
+		<Stack gap={4}>
 			<Select placeholder="Placeholder..." options={options} />
 			<Select placeholder="Placeholder..." value={value} onChange={onChange} options={options} />
 			<Select placeholder="Placeholder..." value={value} disabled onChange={onChange} options={options} />

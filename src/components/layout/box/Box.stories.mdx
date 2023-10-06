@@ -19,7 +19,7 @@ By using it, you can streamline your development process and create more respons
 By default, Box renders a div element. You can customise this via the `as` prop. Props will also be forwarded to the underlying element.
 
 ```jsx
-<Box as="a" href="#" target="_self" padding="medium">
+<Box as="a" href="#" target="_self" padding="4">
 	This Box will act as HTML anchor
 </Box>
 ```
@@ -48,7 +48,7 @@ For the list of all properties check the `atoms.css.ts` file.
 		tablet: 'flex-start'
 	}}
 	borderRadius="medium"
-	padding="medium">
+	padding="4">
 	...
 </Box>
 ```
@@ -60,7 +60,7 @@ Padding can be applied in all directions using tokens as values.
 Margin is intentionally not supported to discurage developers from using it because of bad practices.
 
 ```jsx
-<Box paddingX="small" paddingY="medium">
+<Box paddingX="2" paddingY="3">
 	...
 </Box>
 ```
@@ -72,9 +72,9 @@ Padding can also differ across screen sizes by providing responsive values, e.g.
 ```jsx
 <Box
 	padding={{
-		mobile: 'small',
-		tablet: 'medium',
-		desktop: 'large'
+		mobile: '2',
+		tablet: '3',
+		desktop: '4'
 	}}>
 	...
 </Box>

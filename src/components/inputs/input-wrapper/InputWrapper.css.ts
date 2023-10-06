@@ -23,8 +23,8 @@ export const input = style({
 	fontSize: tokens.typography.size.small,
 	lineHeight: tokens.typography.lineHeight.medium,
 	borderRadius: tokens.borders.radius.small,
-	paddingLeft: tokens.spacing.small,
-	paddingRight: tokens.spacing.small,
+	paddingLeft: tokens.spacing[3],
+	paddingRight: tokens.spacing[3],
 	backgroundColor: tokens.colors['shades.00'],
 	color: 'inherit',
 
@@ -53,5 +53,5 @@ export const iconSlot = style({
 	alignItems: 'center'
 })
 
-export const endIconSpacing = style({ paddingRight: tokens.spacing.xlarge })
-export const startIconSpacing = style({ paddingLeft: tokens.spacing.xlarge })
+export const endIconSpacing = style({ paddingRight: tokens.spacing[12] })
+export const startIconSpacing = style({ paddingLeft: tokens.spacing[12] })

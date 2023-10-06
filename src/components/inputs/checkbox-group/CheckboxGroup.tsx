@@ -26,7 +26,7 @@ export const CheckboxGroup = ({ name, value, onChange, options }: Props) => {
 	}
 
 	return (
-		<Stack gap="xsmall">
+		<Stack gap={2}>
 			{options.map(option => (
 				<Checkbox
 					key={option.value}

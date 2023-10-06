@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { Columns } from './Columns'
 
 export default {
@@ -8,7 +10,7 @@ export default {
 export const Default = () => {
 	return (
 		<div style={{ backgroundColor: 'lightblue', textAlign: 'center' }}>
-			<Columns gap="medium">
+			<Columns gap={6}>
 				<Columns.Item columns={2}>2</Columns.Item>
 				<Columns.Item columns={2}>2</Columns.Item>
 				<Columns.Item columns={2}>2</Columns.Item>
@@ -28,7 +30,7 @@ export const Default = () => {
 export const Responsive = () => {
 	return (
 		<div style={{ backgroundColor: 'lightblue', textAlign: 'center' }}>
-			<Columns gap={{ mobile: 'small', tablet: 'medium', desktop: 'big' }}>
+			<Columns gap={{ mobile: 3, tablet: 4, desktop: 5 }}>
 				<Columns.Item columns={{ mobile: 12, tablet: 4, desktop: 2 }}>2</Columns.Item>
 				<Columns.Item columns={{ mobile: 12, tablet: 4, desktop: 2 }}>2</Columns.Item>
 				<Columns.Item columns={{ mobile: 12, tablet: 4, desktop: 2 }}>2</Columns.Item>

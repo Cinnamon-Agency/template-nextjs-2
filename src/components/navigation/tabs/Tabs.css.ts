@@ -8,10 +8,10 @@ export const tabsWrapper = style({
 })
 
 export const tab = style({
-	paddingLeft: tokens.spacing.medium,
-	paddingRight: tokens.spacing.medium,
-	paddingTop: tokens.spacing.xsmall,
-	paddingBottom: tokens.spacing.xsmall,
+	paddingLeft: tokens.spacing[4],
+	paddingRight: tokens.spacing[4],
+	paddingTop: tokens.spacing[2],
+	paddingBottom: tokens.spacing[2],
 	fontWeight: tokens.typography.weight.regular,
 	fontSize: tokens.typography.size.medium,
 	lineHeight: tokens.typography.lineHeight.large,

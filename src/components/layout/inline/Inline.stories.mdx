@@ -11,7 +11,7 @@ import { Canvas, Meta } from '@storybook/addon-docs'
 
 The spacing between children can be adjusted using the `gap` prop.
 
-Responsive values are supported, e.g. `gap={{ mobile: 'small', tablet: 'medium', desktop: 'large' }}`
+Responsive values are supported, e.g. `gap={{ mobile: '4', tablet: '5', desktop: '6' }}`
 
 ```jsx
 <Inline
@@ -43,7 +43,7 @@ Items of varying height can be vertically aligned using the `alignItems` prop. R
 Items can be aligned horizontally using the `justifyContent` prop. Responsive values are supported.
 
 ```jsx
-<Stack gap="md" alignItems={{ mobile: 'center', tablet: 'left' }}>
+<Stack gap={4} alignItems={{ mobile: 'center', tablet: 'left' }}>
 	<div />
 	<div />
 	<div />

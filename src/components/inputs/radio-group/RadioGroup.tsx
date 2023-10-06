@@ -15,7 +15,7 @@ interface Props {
 
 export const RadioGroup = ({ name, value, onChange, options }: Props) => {
 	return (
-		<Stack gap="xsmall">
+		<Stack gap={2}>
 			{options.map(option => (
 				<Radio
 					key={option.value}

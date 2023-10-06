@@ -18,7 +18,7 @@ export const Default = () => {
 	}
 
 	return (
-		<Stack gap="medium">
+		<Stack gap={4}>
 			<TextInput placeholder="Placeholder..." />
 			<TextInput placeholder="Placeholder..." value={value || 'This input has value'} onChange={onChange} />
 			<TextInput placeholder="Placeholder..." value={value || 'This input is disabled'} disabled onChange={onChange} />

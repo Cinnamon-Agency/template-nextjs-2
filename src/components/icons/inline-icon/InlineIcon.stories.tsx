@@ -11,7 +11,7 @@ export default {
 
 export const Sizes = () => {
 	return (
-		<Stack gap="large">
+		<Stack gap={10}>
 			<Heading variant="h1">
 				<InlineIcon icon={CalendarIconAsset} /> Heading level 1
 			</Heading>

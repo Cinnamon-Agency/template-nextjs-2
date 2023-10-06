@@ -14,7 +14,7 @@ export default {
 export const Playground: StoryFn<ComponentProps<typeof Container>> = args => {
 	return (
 		<Container {...args}>
-			<Stack gap="large">
+			<Stack gap={10}>
 				<Placeholder width="auto" height="100px" />
 				<Placeholder width="auto" height="100px" />
 				<Placeholder width="auto" height="100px" />

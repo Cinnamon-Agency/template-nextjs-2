@@ -12,7 +12,7 @@ export default {
 
 export const Default: StoryFn<ComponentProps<typeof Divider>> = () => {
 	return (
-		<Stack gap="medium">
+		<Stack gap={4}>
 			<Box style={{ height: '50px', border: '1px solid' }} />
 			<Divider />
 			<Box style={{ height: '50px', border: '1px solid' }} />
