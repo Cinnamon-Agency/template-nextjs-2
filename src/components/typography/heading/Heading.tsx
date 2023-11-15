@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Text } from '../text/Text'
+import { Text } from '../text'
 import { TextAtomsProps } from '../types'
 
 interface Props extends TextAtomsProps {

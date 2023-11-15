@@ -30,7 +30,7 @@ export const iconButton = recipe({
 				':hover': { backgroundColor: '#F6F6F6' }
 			},
 			ghost: {
-				backgroundColor: '#FFFFFF',
+				backgroundColor: 'transparent',
 				color: '#5135FF',
 				':hover': { backgroundColor: '#F2F0FF' }
 			},
@@ -49,6 +49,10 @@ export const iconButton = recipe({
 			small: {
 				height: '2.125rem',
 				width: '2.125rem'
+			},
+			medium: {
+				height: '2.5rem',
+				width: '2.5rem'
 			},
 			large: {
 				height: '3rem',

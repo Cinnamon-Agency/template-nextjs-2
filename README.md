@@ -14,7 +14,7 @@ git clone git@github.com:Cinnamon-Agency/template-nextjs-internal.git
 Then, install the dependencies:
 
 ```
-yarn install
+pnpm install
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ yarn install
 To start the development server, run:
 
 ```
-yarn dev
+pnpm dev
 ```
 
 This will start the development server on http://localhost:3000.
@@ -30,7 +30,7 @@ This will start the development server on http://localhost:3000.
 To run Storybook, run:
 
 ```
-yarn storybook
+pnpm storybook
 ```
 
 This will start the Storybook server on http://localhost:6006.
@@ -38,7 +38,7 @@ This will start the Storybook server on http://localhost:6006.
 To build the project for production, run:
 
 ```
-yarn build
+pnpm build
 ```
 
 This will create an optimized build of the project in the out directory.
@@ -46,7 +46,7 @@ This will create an optimized build of the project in the out directory.
 To run the optimized production build, run
 
 ```
-yarn start
+pnpm start
 ```
 
 ## Configuration

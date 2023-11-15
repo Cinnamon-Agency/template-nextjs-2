@@ -6,4 +6,4 @@
 *.jpg
 *.jpeg
 *.svg
-yarn.lock
+pnpm-lock.yaml

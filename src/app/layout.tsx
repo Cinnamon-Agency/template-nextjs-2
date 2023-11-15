@@ -4,9 +4,6 @@ import { ReactNode } from 'react'
 
 import '@/style/app.css'
 
-import { Footer } from '@/components/custom/footer'
-import { Navbar } from '@/components/custom/navbar'
-
 const inter = Inter({
 	weight: ['400', '600', '700'],
 	subsets: ['latin'],
@@ -14,19 +11,14 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-	title: 'Cinnamon Agency',
-	description: 'The one-stop shop to design, develop and deploy your next digital project.'
+	title: 'Next.js v. 14 Template'
 }
 
 // eslint-disable-next-line react/function-component-definition
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<Navbar />
-				{children}
-				<Footer />
-			</body>
+			<body className={inter.className}>{children}</body>
 		</html>
 	)
 }
