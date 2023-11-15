@@ -22,13 +22,7 @@
     "incremental": true,
     "paths": {
       "public/*": ["../public/*"],
-      "@/components/*": ["./components/*"],
-      "@/style/*": ["./style/*"],
-      "@/services/*": ["./services/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/lib/*": ["./lib/*"]
+      "@/*": ["./*"]
     },
     "plugins": [
       {
