@@ -25,7 +25,6 @@
       "@/components/*": ["./components/*"],
       "@/style/*": ["./style/*"],
       "@/services/*": ["./services/*"],
-      "@/contentful/*": ["./contentful/*"],
       "@/hooks/*": ["./hooks/*"],
       "@/types/*": ["./types/*"],
       "@/utils/*": ["./utils/*"],
