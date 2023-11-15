@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2019",
     "lib": [
       "dom",
       "dom.iterable",
@@ -22,13 +22,7 @@
     "incremental": true,
     "paths": {
       "public/*": ["../public/*"],
-      "@/components/*": ["./components/*"],
-      "@/style/*": ["./style/*"],
-      "@/services/*": ["./services/*"],
-      "@/contentful/*": ["./contentful/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"],
-      "@/utils/*": ["./utils/*"],
+      "@/*": ["./*"]
     },
     "plugins": [
       {

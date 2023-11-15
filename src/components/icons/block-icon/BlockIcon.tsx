@@ -11,6 +11,6 @@ interface Props {
 	color?: Atoms['color']
 }
 
-export const BlockIcon = ({ icon: Icon, size = 'large', color }: Props) => {
+export const BlockIcon = ({ icon: Icon, size = 'medium', color }: Props) => {
 	return <Icon className={clsx(sizes[size], atoms({ color }))} viewBox="0 0 24 24" />
 }

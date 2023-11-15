@@ -1,6 +1,6 @@
 import { keyframes, style } from '@vanilla-extract/css'
 
-import { tokens } from '../../../style/theme.css'
+import { tokens } from '@/style/theme.css'
 
 const overlayShow = keyframes({
 	from: {
@@ -23,7 +23,7 @@ const contentShow = keyframes({
 })
 
 export const overlay = style({
-	backgroundColor: 'rgba(0, 0, 0, 0.75)',
+	backgroundColor: 'rgba(0, 0, 0, 0.275)',
 	position: 'fixed',
 	inset: 0,
 	animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`
@@ -32,7 +32,6 @@ export const overlay = style({
 export const content = style({
 	backgroundColor: tokens.colors['shades.00'],
 	borderRadius: tokens.borders.radius.medium,
-	boxShadow: tokens.shadows.medium,
 	position: 'fixed',
 	top: '50%',
 	left: '50%',
