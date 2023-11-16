@@ -20,14 +20,17 @@ const responsiveProperties = defineProperties({
 		justifyContent: ['stretch', 'flex-start', 'center', 'flex-end', 'space-around', 'space-between', 'space-evenly'],
 		alignItems: ['stretch', 'flex-start', 'center', 'flex-end'],
 		flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
+		flexShrink: ['0', '1'],
+		flexGrow: ['0', '1'],
+		textAlign: ['left', 'right', 'center', 'justify'],
+		width: ['auto', '100%', '100vw'],
+		height: ['auto', '100%', '100vh'],
 		gap: tokens.spacing,
 		paddingTop: tokens.spacing,
 		paddingBottom: tokens.spacing,
 		paddingLeft: tokens.spacing,
 		paddingRight: tokens.spacing,
-		// Typography tokens
-		fontSize: tokens.typography.size,
-		textAlign: ['left', 'right', 'center', 'justify']
+		fontSize: tokens.typography.size
 	},
 	shorthands: {
 		padding: ['paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight'],
@@ -35,7 +38,10 @@ const responsiveProperties = defineProperties({
 		paddingY: ['paddingTop', 'paddingBottom'],
 		direction: ['flexDirection'],
 		justify: ['justifyContent'],
-		align: ['alignItems']
+		wrap: ['flexWrap'],
+		align: ['alignItems'],
+		shrink: ['flexShrink'],
+		grow: ['flexGrow']
 	}
 })
 
@@ -44,6 +50,10 @@ const staticProperties = defineProperties({
 	properties: {
 		overflow: ['visible', 'hidden', 'scroll', 'auto'],
 		position: ['static', 'relative', 'absolute', 'fixed', 'sticky'],
+		top: ['auto', '0', '50%', '100%'],
+		bottom: ['auto', '0', '50%', '100%'],
+		left: ['auto', '0', '50%', '100%'],
+		right: ['auto', '0', '50%', '100%'],
 		color: tokens.colors,
 		backgroundColor: tokens.colors,
 		boxShadow: tokens.shadows,
