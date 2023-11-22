@@ -8,6 +8,11 @@ const withVanillaExtract = createVanillaExtractPlugin()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	// Still needed as css will not be loaded if removed.
+	// https://github.com/vanilla-extract-css/vanilla-extract/issues/1086#issuecomment-1763836814
+	experimental: {
+		appDir: true
+	},
 	images: {
 		domains: ['lh3.googleusercontent.com']
 	},
