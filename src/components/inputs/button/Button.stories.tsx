@@ -1,8 +1,8 @@
 import { ComponentProps } from 'react'
 
-import { InlineIcon } from 'components/icons/inline-icon/InlineIcon'
-import { Box } from 'components/layout/box/Box'
-import { Stack } from 'components/layout/stack/Stack'
+import { InlineIcon } from 'components/icons/inline-icon'
+import { Box } from 'components/layout/box'
+import { Stack } from 'components/layout/stack'
 
 import CheckmarkInlineIcon from './assets/check-inline-icon.svg'
 import { Button } from './Button'
@@ -32,7 +32,7 @@ Playground.args = {
 export const Variants = () => {
 	return (
 		<Box display="flex" gap={16}>
-			<Stack gap={4} alignItems="flex-start">
+			<Stack gap={4} align="flex-start">
 				<Button variant="primary">
 					<InlineIcon icon={CheckmarkInlineIcon} />
 					Primary
@@ -54,7 +54,7 @@ export const Variants = () => {
 					Success
 				</Button>
 			</Stack>
-			<Stack gap={4} alignItems="flex-start">
+			<Stack gap={4} align="flex-start">
 				<Button variant="primary" size="small">
 					<InlineIcon icon={CheckmarkInlineIcon} />
 					Primary

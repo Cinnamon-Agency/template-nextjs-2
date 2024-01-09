@@ -36,7 +36,7 @@ export const WithComponentAs = () => (
 )
 
 export const WithFlexProperties = () => (
-	<Box display="flex" justifyContent="space-between" padding={4} boxShadow="medium" borderRadius="medium">
+	<Box display="flex" justify="space-between" padding={4} boxShadow="medium" borderRadius="medium">
 		<Box padding={5} borderRadius="full">
 			Left
 		</Box>

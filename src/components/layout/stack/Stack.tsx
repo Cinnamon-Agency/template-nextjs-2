@@ -2,12 +2,12 @@ import { PropsWithChildren } from 'react'
 
 import { Atoms } from 'style/atoms.css'
 
-import { Box } from '../box/Box'
+import { Box } from '../box'
 
-type Props = PropsWithChildren<Pick<Atoms, 'justifyContent' | 'alignItems' | 'gap'>>
+type Props = PropsWithChildren<Pick<Atoms, 'justify' | 'align' | 'gap'>>
 
 export const Stack = ({ children, ...rest }: Props) => (
-	<Box display="flex" flexDirection="column" {...rest}>
+	<Box display="flex" direction="column" {...rest}>
 		{children}
 	</Box>
 )

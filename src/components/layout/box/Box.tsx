@@ -5,7 +5,12 @@ import { ElementType, HTMLAttributes } from 'react'
 import { Atoms, atoms } from 'style/atoms.css'
 import { filterAtomsFromNativeAttributes } from 'style/utils/filterAtomsFromNativeAttributes'
 
-type Common<E extends ElementType> = HTMLAttributes<E> & { as?: E } & Atoms
+// Enforces the shorthand property usage like "justify", "align", "grow"...
+type OmittedAtoms = Omit<
+	Atoms,
+	'flexDirection' | 'justifyContent' | 'alignItems' | 'flexWrap' | 'flexShrink' | 'flexGrow'
+>
+type Common<E extends ElementType> = HTMLAttributes<E> & { as?: E } & OmittedAtoms
 
 type Props<E extends ElementType> = E extends keyof JSX.IntrinsicElements
 	? JSX.IntrinsicElements[E] & Common<E>

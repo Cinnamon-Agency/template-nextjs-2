@@ -82,7 +82,7 @@ export const DataTable = <TData, TValue>({ columns, data }: DataTableProps<TData
 					</TableBody>
 				</Table>
 			</Box>
-			<Box display="flex" justifyContent="space-between">
+			<Box display="flex" justify="space-between">
 				<Button variant="ghost" size="small">
 					Export as .xlsl
 				</Button>
