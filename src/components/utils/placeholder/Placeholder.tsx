@@ -14,8 +14,8 @@ export const Placeholder = ({ width = 120, height = 120 }: Props) => {
 			position="relative"
 			overflow="hidden"
 			display="flex"
-			alignItems="center"
-			justifyContent="center"
+			align="center"
+			justify="center"
 			style={{
 				width: resolveToPxIfUnitless(width),
 				height: resolveToPxIfUnitless(height),

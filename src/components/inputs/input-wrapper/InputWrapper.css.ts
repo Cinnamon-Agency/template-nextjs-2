@@ -55,4 +55,5 @@ export const iconSlot = style({
 })
 
 export const endIconSpacing = style({ paddingRight: tokens.spacing[12] })
+export const predifinedTextSpacing = style({ paddingLeft: tokens.spacing[22] })	
 export const startIconSpacing = style({ paddingLeft: tokens.spacing[12] })

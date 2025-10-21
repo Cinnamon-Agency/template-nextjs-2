@@ -22,8 +22,8 @@ export const Playground: StoryFn<ComponentProps<typeof Stack>> = args => {
 
 Playground.args = {
 	gap: 4,
-	alignItems: 'flex-start',
-	justifyContent: 'center'
+	align: 'flex-start',
+	justify: 'center'
 }
 
 export const Nested = () => (
