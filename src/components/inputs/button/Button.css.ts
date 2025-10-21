@@ -37,6 +37,10 @@ export const button = recipe({
 				color: '#5135FF',
 				':hover': { backgroundColor: '#F2F0FF' }
 			},
+			adaptive: {
+				backgroundColor: 'transparent',
+				padding: 'unset'
+			},
 			destructive: {
 				backgroundColor: '#FE5F55',
 				color: '#FCFCFC',
@@ -49,6 +53,10 @@ export const button = recipe({
 			}
 		},
 		size: {
+			auto: {
+				height: 'auto',
+				width: 'auto'
+			},
 			small: {
 				height: '2.125rem',
 				paddingLeft: tokens.spacing[6],
