@@ -1,1 +1,0 @@
-export { InlineIcon } from './InlineIcon'

@@ -1,1 +1,0 @@
-export { PatternInput } from './PatternInput'
